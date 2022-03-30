@@ -1,0 +1,17 @@
+Package: contribution
+Type: Package
+Title: Contribution of studies in Network Meta-analysis
+Version: 0.3.1
+Author: Thodoris Papakonstantinou
+Maintainer: Thodoris Papakonstantinou <theodoros.papakonstantinou@ispm.unibe.ch>
+Description: Computes contributions of studies evidence in Network meta-analysis
+  by converting the hatmatrix to a network and decomposing its flow.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Imports:
+    igraph (>= 1.0.1)
+  , netmeta (>= 0.9-6)
+Suggests:
+    rlist
+  , dplyr

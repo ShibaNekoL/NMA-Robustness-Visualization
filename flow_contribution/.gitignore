@@ -1,0 +1,11 @@
+*.swp
+*.RData
+*.Rhistory
+*.Rproj.user*
+*.Rproj*
+*.eps
+.Rproj.user
+tests/*.csv
+tests/*.svg
+tests/*.json
+tests/*.png

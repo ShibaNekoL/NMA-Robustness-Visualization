@@ -1,0 +1,7 @@
+library(devtools)
+library(nmadb)
+install_github("esm-ispm-unibe-ch/flow_contribution")
+library(contribution)
+st1 = readByID(482001)
+contMatrix = getContributionMatrix(st1$data, type="long_binary", model="random", sm="RR")
+print(contMatrix$contributionMatrix)

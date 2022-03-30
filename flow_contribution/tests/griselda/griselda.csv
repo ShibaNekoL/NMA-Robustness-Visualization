@@ -1,0 +1,362 @@
+"rowID";"id";"armID";"study_name";"t";"n";"r"
+"a20";8;1;"Hale2010 (CL3-20098-045)";"Agomelatine";252;177
+"a21";8;2;"Hale2010 (CL3-20098-045)";"Fluoxetine";263;164
+"a24";10;1;"Montgomery2004b (CL3-20098-030)";"Agomelatine";167;106
+"a25";10;2;"Montgomery2004b (CL3-20098-030)";"Paroxetine";168;120
+"a26";11;1;"CL3-20098-036";"Agomelatine";137;113
+"a27";11;2;"CL3-20098-036";"Venlafaxine";140;111
+"a28";12;1;"CL3-20098-048";"Agomelatine";213;127
+"a29";12;2;"CL3-20098-048";"Paroxetine";199;118
+"a30";13;1;"Shu2014 (CL3-20098-052, ChiCTR-TRC-11001668) ";"Agomelatine";314;205
+"a31";13;2;"Shu2014 (CL3-20098-052, ChiCTR-TRC-11001668) ";"Fluoxetine";314;209
+"a32";14;1;"Quera-Salva2010 (CL3-20098-056)";"Agomelatine";71;44
+"a33";14;2;"Quera-Salva2010 (CL3-20098-056)";"Escitalopram";67;36
+"a34";15;1;"CL3-20098-062";"Agomelatine";202;131
+"a35";15;2;"CL3-20098-062";"Duloxetine";216;153
+"a36";16;1;"Corruble2013 (CL3-20098-063)";"Agomelatine";164;134
+"a37";16;2;"Corruble2013 (CL3-20098-063)";"Escitalopram";160;128
+"a44";19;1;"Lemoine2007 (CL3-20098-035)";"Agomelatine";165;126
+"a45";19;2;"Lemoine2007 (CL3-20098-035)";"Venlafaxine";167;115
+"b15";52;2;"Feighner1991";"Bupropion";61;37
+"b14";52;1;"Feighner1991";"Fluoxetine";62;35
+"b16";53;1;"Weisler1994";"Bupropion";63;33
+"b17";53;2;"Weisler1994";"Trazodone";61;21
+"b35";59;1;"Caligiuri2003";"Bupropion";7;3
+"b36";59;2;"Caligiuri2003";"Sertraline";9;4
+"b39";61;1;"Thase2006 (WELL 100368)";"Bupropion";171;86
+"b40";61;2;"Thase2006 (WELL 100368)";"Venlafaxine";177;82
+"b79";75;1;"WELL AK140016";"Bupropion";69;35
+"b80";75;2;"WELL AK140016";"Paroxetine";71;36
+"c13";82;1;"Andersen1986";"Citalopram";57;23
+"c14";82;2;"Andersen1986";"Clomipramine";57;31
+"c18";84;2;"Timmerman1993 (Study 89422 - FDA and Haffmans 1996)";"Citalopram";108;33
+"c17";84;1;"Timmerman1993 (Study 89422 - FDA and Haffmans 1996)";"Fluvoxamine";109;31
+"c20";85;2;"Patris1996 (Study 91301 - FDA)";"Citalopram";173;120
+"c19";85;1;"Patris1996 (Study 91301 - FDA)";"Fluoxetine";184;123
+"c22";86;2;"Bougerol1997 (Study 91302 - FDA)";"Citalopram";158;102
+"c21";86;1;"Bougerol1997 (Study 91302 - FDA)";"Fluoxetine";158;109
+"c36";93;1;"Hsu2011";"Citalopram";25;9
+"c37";93;2;"Hsu2011";"Sertraline";26;6
+"du23";114;1;"Perahia2008a (HMBU) (NCT00071695)";"Duloxetine";166;85
+"du24";114;2;"Perahia2008a (HMBU) (NCT00071695)";"Venlafaxine";166;91
+"du27";116;1;"Perahia2008b (HMCQ) (NCT00067912)";"Duloxetine";164;79
+"du28";116;2;"Perahia2008b (HMCQ) (NCT00067912)";"Venlafaxine";340;170
+"du33";118;1;"Lee2007 (F1J-AA-HMCV) (NCT00489775)";"Duloxetine";238;144
+"du34";118;2;"Lee2007 (F1J-AA-HMCV) (NCT00489775)";"Paroxetine";240;157
+"du57";126;1;"Hao2014";"Duloxetine";140;86
+"du58";126;2;"Hao2014";"Paroxetine";141;74
+"e13";131;1;"Kennedy2005 (SCT-MD-16)";"Escitalopram";102;61
+"e14";131;2;"Kennedy2005 (SCT-MD-16)";"Fluoxetine";103;63
+"e17";133;1;"Bielski2004 (SCT-MD-12)";"Escitalopram";101;59
+"e18";133;2;"Bielski2004 (SCT-MD-12)";"Venlafaxine";101;47
+"e19";134;1;"Montgomery2004a (Study 99067)";"Escitalopram";148;113
+"e20";134;2;"Montgomery2004a (Study 99067)";"Venlafaxine";145;113
+"e23";136;1;"Ventura2007 (SCT-MD-18)";"Escitalopram";107;75
+"e24";136;2;"Ventura2007 (SCT-MD-18)";"Sertraline";108;74
+"e26";137;2;"Lalit2004";"Citalopram";74;64
+"e25";137;1;"Lalit2004";"Escitalopram";69;62
+"e27";137;3;"Lalit2004";"Sertraline";71;69
+"e34";140;2;"Colonna2005 (Study 99022)";"Citalopram";182;96
+"e33";140;1;"Colonna2005 (Study 99022)";"Escitalopram";175;104
+"e36";141;2;"Moore2005";"Citalopram";152;87
+"e35";141;1;"Moore2005";"Escitalopram";142;105
+"e41";143;2;"Baldwin2006b (Study 99505)";"Escitalopram";166;112
+"e40";143;1;"Baldwin2006b (Study 99505)";"Paroxetine";159;111
+"e43";144;2;"Wade2007 (Study 10990)";"Duloxetine";151;81
+"e42";144;1;"Wade2007 (Study 10990)";"Escitalopram";144;94
+"e45";145;2;"Khan2007 (SCT-MD-23) (NCT00108979)";"Duloxetine";138;52
+"e44";145;1;"Khan2007 (SCT-MD-23) (NCT00108979)";"Escitalopram";140;61
+"e49";146;1;"Boulenger2006 (Study 10351)";"Escitalopram";232;144
+"e50";146;2;"Boulenger2006 (Study 10351)";"Paroxetine";227;128
+"e52";147;2;"Li2006";"Citalopram";28;19
+"e51";147;1;"Li2006";"Escitalopram";28;22
+"e57";148;2;"Yevtushenko2007";"Citalopram";110;90
+"e55";148;1;"Yevtushenko2007";"Escitalopram";109;103
+"e59";149;2;"Mao2008";"Escitalopram";123;94
+"e58";149;1;"Mao2008";"Fluoxetine";117;89
+"e61";150;2;"Hu2009";"Citalopram";23;19
+"e60";150;1;"Hu2009";"Escitalopram";25;21
+"e63";151;2;"Jiang2009";"Citalopram";32;31
+"e62";151;1;"Jiang2009";"Escitalopram";32;30
+"e64";152;1;"Ou2010";"Citalopram";120;87
+"e65";152;2;"Ou2010";"Escitalopram";120;83
+"e67";153;2;"Li2010";"Citalopram";24;19
+"e66";153;1;"Li2010";"Escitalopram";24;20
+"e78";157;2;"Lv2013";"Citalopram";22;17
+"e77";157;1;"Lv2013";"Escitalopram";20;16
+"f14";169;2;"Chouinard1985";"Amitriptyline";28;15
+"f13";169;1;"Chouinard1985";"Fluoxetine";25;8
+"f26";175;2;"DeRonchi1998";"Amitriptyline";33;18
+"f25";175;1;"DeRonchi1998";"Fluoxetine";32;16
+"f27";176;1;"Debus1988";"Fluoxetine";22;9
+"f28";176;2;"Debus1988";"Trazodone";21;9
+"f32";178;2;"Laakman1988  ";"Amitriptyline";65;57
+"f31";178;1;"Laakman1988  ";"Fluoxetine";63;55
+"f36";180;2;"Falk1989";"Fluoxetine";14;8
+"f35";180;1;"Falk1989";"Trazodone";13;4
+"f37";181;1;"Fawcett1989";"Amitriptyline";20;7
+"f38";181;2;"Fawcett1989";"Fluoxetine";20;8
+"f40";182;2;"Manna1989";"Clomipramine";15;11
+"f39";182;1;"Manna1989";"Fluoxetine";15;12
+"f42";183;2;"Ginestet1989";"Clomipramine";26;18
+"f41";183;1;"Ginestet1989";"Fluoxetine";28;22
+"f44";184;2;"Ropert1989  ";"Clomipramine";72;31
+"f43";184;1;"Ropert1989  ";"Fluoxetine";71;42
+"f45";185;1;"Fudge1990";"Fluoxetine";21;10
+"f46";185;2;"Fudge1990";"Trazodone";17;13
+"f48";186;2;"Kerkhofs1990";"Amitriptyline";18;6
+"f47";186;1;"Kerkhofs1990";"Fluoxetine";16;6
+"f49";187;1;"Noguera1991";"Clomipramine";60;32
+"f50";187;2;"Noguera1991";"Fluoxetine";60;37
+"f52";188;2;"Keegan1991";"Amitriptyline";22;16
+"f51";188;1;"Keegan1991";"Fluoxetine";20;12
+"f54";189;2;"Preskorn1991";"Amitriptyline";31;8
+"f53";189;1;"Preskorn1991";"Fluoxetine";30;12
+"f56";190;2;"Beasley1991";"Fluoxetine";65;33
+"f55";190;1;"Beasley1991";"Trazodone";61;34
+"f58";191;2;"Judd1993";"Amitriptyline";28;12
+"f57";191;1;"Judd1993";"Fluoxetine";30;15
+"f67";196;1;"Demyttenaere1998  ";"Amitriptyline";31;18
+"f68";196;2;"Demyttenaere1998  ";"Fluoxetine";35;22
+"f70";197;2;"Marchesi1998  ";"Amitriptyline";75;59
+"f69";197;1;"Marchesi1998  ";"Fluoxetine";67;45
+"f72";198;2;"OntiverosSanchez1998  ";"Amitriptyline";21;6
+"f71";198;1;"OntiverosSanchez1998  ";"Fluoxetine";21;7
+"f74";199;2;"Versiani1999";"Amitriptyline";80;58
+"f73";199;1;"Versiani1999";"Fluoxetine";77;57
+"f80";202;2;"Fava2002";"Fluoxetine";92;57
+"f81";202;3;"Fava2002";"Paroxetine";96;64
+"f79";202;1;"Fava2002";"Sertraline";96;70
+"fl02";210;2;"DeWilde1983a";"Clomipramine";21;17
+"fl01";210;1;"DeWilde1983a";"Fluvoxamine";22;16
+"fl23";221;1;"Remick1994";"Amitriptyline";17;5
+"fl24";221;2;"Remick1994";"Fluvoxamine";16;9
+"fl25";222;1;"Nemeroff1995";"Fluvoxamine";49;27
+"fl26";222;2;"Nemeroff1995";"Sertraline";48;23
+"fl28";223;2;"Ottevanger1995";"Clomipramine";20;16
+"fl27";223;1;"Ottevanger1995";"Fluvoxamine";20;13
+"fl30";224;2;"Rapaport1996";"Fluoxetine";49;29
+"fl29";224;1;"Rapaport1996";"Fluvoxamine";51;30
+"fl35";227;1;"Kiev1997";"Fluvoxamine";30;17
+"fl36";227;2;"Kiev1997";"Paroxetine";30;16
+"fl38";228;2;"Murasaki1998";"Amitriptyline";122;54
+"fl37";228;1;"Murasaki1998";"Fluvoxamine";113;51
+"fl40";229;2;"Dalery2003";"Fluoxetine";94;54
+"fl39";229;1;"Dalery2003";"Fluvoxamine";90;53
+"fl41";230;1;"Rossini2005";"Fluvoxamine";40;29
+"fl42";230;2;"Rossini2005";"Sertraline";48;28
+"fl46";232;2;"Harris1991";"Amitriptyline";34;21
+"fl45";232;1;"Harris1991";"Fluvoxamine";35;13
+"m03";239;3;"Ansseau1989a";"Amitriptyline";49;35
+"m02";239;2;"Ansseau1989a";"Milnacipran";95;53
+"m05";240;2;"Ansseau1989b";"Amitriptyline";43;22
+"m04";240;1;"Ansseau1989b";"Milnacipran";44;28
+"m06";241;1;"Ansseau1991";"Fluvoxamine";41;22
+"m10";241;3;"Ansseau1991";"Milnacipran";85;56
+"m12";242;2;"Ansseau1994b";"Fluoxetine";93;43
+"m11";242;1;"Ansseau1994b";"Milnacipran";97;32
+"m14";243;2;"Leinonen1997";"Clomipramine";55;32
+"m13";243;1;"Leinonen1997";"Milnacipran";52;32
+"m17";244;3;"Guelfi1998";"Fluoxetine";100;51
+"m16";244;2;"Guelfi1998";"Milnacipran";200;109
+"m18";245;1;"Clerc2001";"Fluvoxamine";56;32
+"m19";245;2;"Clerc2001";"Milnacipran";57;40
+"m20";246;1;"Yang2003";"Milnacipran";27;4
+"m21";246;2;"Yang2003";"Sertraline";26;2
+"m22";247;1;"Sechter2004";"Milnacipran";149;86
+"m23";247;2;"Sechter2004";"Paroxetine";153;91
+"m25";248;2;"Kamijima2013 (japicCTI-090733)";"Milnacipran";604;338
+"m26";248;3;"Kamijima2013 (japicCTI-090733)";"Paroxetine";301;171
+"mi33";258;1;"vanMoffaert1995b";"Mirtazapine";100;61
+"mi34";258;2;"vanMoffaert1995b";"Trazodone";100;51
+"mi42";262;2;"Wheatley1998";"Fluoxetine";67;28
+"mi41";262;1;"Wheatley1998";"Mirtazapine";66;39
+"mi44";263;2;"Leinonen1999 (Agren1995)";"Citalopram";133;117
+"mi43";263;1;"Leinonen1999 (Agren1995)";"Mirtazapine";137;116
+"mi45";264;1;"Benkert2000 (E-1559)";"Mirtazapine";139;74
+"mi46";264;2;"Benkert2000 (E-1559)";"Paroxetine";136;66
+"mi49";265;1;"Schatzberg2002 (003-901)";"Mirtazapine";128;72
+"mi50";265;2;"Schatzberg2002 (003-901)";"Paroxetine";126;60
+"mi52";266;2;"Hong2003 (22521)";"Fluoxetine";66;30
+"mi51";266;1;"Hong2003 (22521)";"Mirtazapine";66;35
+"mi53";267;1;"Behnke2003 (E-1690, Kjernisted2002)";"Mirtazapine";176;117
+"mi54";267;2;"Behnke2003 (E-1690, Kjernisted2002)";"Sertraline";170;114
+"mi55";268;1;"Wade2003 (E-1721)";"Mirtazapine";99;35
+"mi56";268;2;"Wade2003 (E-1721)";"Paroxetine";98;40
+"mi58";269;2;"Winokur2003";"Fluoxetine";12;6
+"mi57";269;1;"Winokur2003";"Mirtazapine";8;8
+"mi60";270;2;"Amini2005";"Fluoxetine";18;8
+"mi59";270;1;"Amini2005";"Mirtazapine";18;12
+"mi62";271;2;"Versiani2005";"Fluoxetine";149;104
+"mi61";271;1;"Versiani2005";"Mirtazapine";145;106
+"mi63";272;1;"Szegedi2006";"Mirtazapine";130;72
+"mi64";272;2;"Szegedi2006";"Venlafaxine";128;62
+"mi82";277;2;"Murasaki2010a (iQWIG22532, Schoemaker2002)";"Fluvoxamine";105;70
+"mi81";277;1;"Murasaki2010a (iQWIG22532, Schoemaker2002)";"Mirtazapine";104;61
+"mi84";278;2;"Murasaki2010b (iQWIG9902, Schoemaker2002)";"Fluvoxamine";102;57
+"mi83";278;1;"Murasaki2010b (iQWIG9902, Schoemaker2002)";"Mirtazapine";101;71
+"mi85";279;1;"Benkert2006(C-1763)";"Mirtazapine";140;70
+"mi86";279;2;"Benkert2006(C-1763)";"Venlafaxine";135;56
+"mi87";280;1;"E-1569";"Mirtazapine";73;40
+"mi88";280;2;"E-1569";"Paroxetine";75;48
+"mi89";281;1;"Debonnel2000 (Blier2009, iQWIG E-1639)";"Mirtazapine";21;4
+"mi90";281;2;"Debonnel2000 (Blier2009, iQWIG E-1639)";"Paroxetine";21;9
+"n04";284;2;"Armitage1997";"Fluoxetine";21;11
+"n03";284;1;"Armitage1997";"Nefazodone";22;11
+"n05";285;1;"Baldwin1996";"Nefazodone";105;58
+"n06";285;2;"Baldwin1996";"Paroxetine";101;58
+"n08";286;2;"Berlanga1997";"Fluoxetine";37;18
+"n07";286;1;"Berlanga1997";"Nefazodone";37;17
+"n16";289;1;"Feiger1996";"Nefazodone";78;42
+"n17";289;2;"Feiger1996";"Sertraline";82;41
+"n24";292;2;"Gillin1997";"Fluoxetine";20;8
+"n23";292;1;"Gillin1997";"Nefazodone";24;12
+"n25";293;1;"Hicks2002";"Nefazodone";20;11
+"n26";293;2;"Hicks2002";"Paroxetine";20;16
+"p004";305;2;"PAR 29060.318 (HP/82/64A)";"Amitriptyline";12;3
+"p003";305;1;"PAR 29060.318 (HP/82/64A)";"Paroxetine";9;4
+"p008";307;2;"PAR 29060.310 (HP 81/85A)";"Amitriptyline";13;5
+"p007";307;1;"PAR 29060.310 (HP 81/85A)";"Paroxetine";10;2
+"p016";311;2;"PAR 29060/281 ";"Amitriptyline";80;43
+"p015";311;1;"PAR 29060/281 ";"Paroxetine";82;30
+"p018";312;2;"PAR MDUK 032";"Amitriptyline";30;14
+"p017";312;1;"PAR MDUK 032";"Paroxetine";29;15
+"p043";324;2;"Kuhs1989 (MDUK_29060_III_85_043)";"Amitriptyline";12;4
+"p042";324;1;"Kuhs1989 (MDUK_29060_III_85_043)";"Paroxetine";12;7
+"p046";326;1;"Guillibert1989 (PAR 290 MDF 29060 1727 M)";"Clomipramine";39;28
+"p047";326;2;"Guillibert1989 (PAR 290 MDF 29060 1727 M)";"Paroxetine";40;26
+"p048";327;1;"Pelicier1993 (PAR MDED/29060/III/86/1728M291)";"Clomipramine";42;25
+"p049";327;2;"Pelicier1993 (PAR MDED/29060/III/86/1728M291)";"Paroxetine";41;29
+"p053";329;2;"MDF/29060/III/070/88/MC";"Clomipramine";30;12
+"p052";329;1;"MDF/29060/III/070/88/MC";"Paroxetine";32;22
+"p055";330;2;"Rouillon1991 (Limosin2006, 029060/1/CPMS 069 1991)";"Clomipramine";47;23
+"p054";330;1;"Rouillon1991 (Limosin2006, 029060/1/CPMS 069 1991)";"Paroxetine";45;27
+"p057";331;2;"Geretsegger1995 (MY-060/BRL-029060/1)";"Amitriptyline";47;24
+"p056";331;1;"Geretsegger1995 (MY-060/BRL-029060/1)";"Paroxetine";44;21
+"p059";332;2;"DUAG1990";"Clomipramine";58;31
+"p058";332;1;"DUAG1990";"Paroxetine";62;23
+"p067";335;2;"Tignol1993 (29060/087)";"Fluoxetine";87;54
+"p066";335;1;"Tignol1993 (29060/087)";"Paroxetine";89;53
+"p069";336;2;"Schoene1993 (Geretsegger1994 MY1021/BRC)";"Fluoxetine";52;8
+"p068";336;1;"Schoene1993 (Geretsegger1994 MY1021/BRC)";"Paroxetine";54;19
+"p071";337;2;"Ontiveros1994 (MY-0144/BRL 29060/1/CPMS-135 (PAR135))";"Fluoxetine";62;35
+"p070";337;1;"Ontiveros1994 (MY-0144/BRL 29060/1/CPMS-135 (PAR135))";"Paroxetine";60;41
+"p073";338;2;"Bignamini1992 (PAR 29060/078)";"Amitriptyline";153;91
+"p072";338;1;"Bignamini1992 (PAR 29060/078)";"Paroxetine";156;82
+"p074";339;1;"Hutchinson1992";"Amitriptyline";32;15
+"p075";339;2;"Hutchinson1992";"Paroxetine";58;34
+"p077";340;2;"Staner1995 (063)";"Amitriptyline";19;9
+"p076";340;1;"Staner1995 (063)";"Paroxetine";21;7
+"p084";342;2;"Ansseau1994a (MY-1005/BRL-029060/1/CPMS-112)";"Fluvoxamine";65;24
+"p083";342;1;"Ansseau1994a (MY-1005/BRL-029060/1/CPMS-112)";"Paroxetine";55;24
+"p086";343;2;"DeWilde1993";"Fluoxetine";50;26
+"p085";343;1;"DeWilde1993";"Paroxetine";49;25
+"p088";344;2;"Gagiano1993";"Fluoxetine";45;27
+"p087";344;1;"Gagiano1993";"Paroxetine";45;30
+"p094";347;2;"29060/356";"Fluoxetine";70;32
+"p093";347;1;"29060/356";"Paroxetine";68;33
+"p096";348;2;"SER-CHN-1";"Amitriptyline";118;80
+"p095";348;1;"SER-CHN-1";"Paroxetine";113;94
+"p100";350;2;"Moller1993 (Stuppaeck1994, MY-059.073/29060/1)";"Amitriptyline";75;46
+"p099";350;1;"Moller1993 (Stuppaeck1994, MY-059.073/29060/1)";"Paroxetine";78;43
+"p102";351;2;"Christiansen1996";"Amitriptyline";73;48
+"p101";351;1;"Christiansen1996";"Paroxetine";71;46
+"p115";356;2;"Ravindran1997 (MY-1055/BRL-029060/1/CPMS-245 PAR 245)";"Clomipramine";506;317
+"p114";356;1;"Ravindran1997 (MY-1055/BRL-029060/1/CPMS-245 PAR 245)";"Paroxetine";513;328
+"p122";359;2;"Chouinard1999 (29060/131)";"Fluoxetine";101;67
+"p121";359;1;"Chouinard1999 (29060/131)";"Paroxetine";102;67
+"p123";360;1;"Tsutsui2000";"Paroxetine";116;65
+"p124";360;2;"Tsutsui2000";"Trazodone";109;45
+"p126";361;2;"Miura2000";"Amitriptyline";119;54
+"p125";361;1;"Miura2000";"Paroxetine";109;42
+"p136";364;2;"Cassano2002 (29060/421)";"Fluoxetine";119;35
+"p135";364;1;"Cassano2002 (29060/421)";"Paroxetine";123;50
+"r08";383;2;"Bosc1997b (Study 016 - Massana 1999)";"Fluoxetine";89;64
+"r07";383;1;"Bosc1997b (Study 016 - Massana 1999)";"Reboxetine";79;59
+"r24";389;2;"Baldwin2006a (97-CRBX-052 - Study 052)";"Paroxetine";166;100
+"r23";389;1;"Baldwin2006a (97-CRBX-052 - Study 052)";"Reboxetine";159;80
+"r32";392;2;"Study 043";"Citalopram";176;98
+"r31";392;1;"Study 043";"Reboxetine";183;77
+"r33";393;1;"Schwartz2002 (iQWIG)";"Reboxetine";80;45
+"r34";393;2;"Schwartz2002 (iQWIG)";"Venlafaxine";87;48
+"r38";395;2;"Studie032 (M2020/0032)";"Fluoxetine";42;23
+"r37";395;1;"Studie032 (M2020/0032)";"Reboxetine";43;21
+"s05";397;2;"Cohn1990";"Amitriptyline";80;40
+"s04";397;1;"Cohn1990";"Sertraline";161;84
+"s07";398;2;"Aguglia1993";"Fluoxetine";56;26
+"s06";398;1;"Aguglia1993";"Sertraline";52;35
+"s09";399;2;"Bersani1994";"Amitriptyline";34;17
+"s08";399;1;"Bersani1994";"Sertraline";34;18
+"s11";400;2;"Moon1994";"Clomipramine";55;29
+"s10";400;1;"Moon1994";"Sertraline";51;28
+"s15";402;2;"Bennie1995";"Fluoxetine";144;63
+"s14";402;1;"Bennie1995";"Sertraline";142;73
+"s17";403;2;"vanMoffaert1995a";"Fluoxetine";82;48
+"s16";403;1;"vanMoffaert1995a";"Sertraline";83;49
+"s23";405;1;"Ekselius1997";"Citalopram";200;136
+"s24";405;2;"Ekselius1997";"Sertraline";200;139
+"s27";407;1;"Moller1998 (Hegerl1997)";"Amitriptyline";79;40
+"s28";407;2;"Moller1998 (Hegerl1997)";"Sertraline";81;32
+"s30";408;2;"Sechter1999";"Fluoxetine";120;35
+"s29";408;1;"Sechter1999";"Sertraline";118;48
+"s32";409;2;"Newhouse2000";"Fluoxetine";119;84
+"s31";409;1;"Newhouse2000";"Sertraline";117;85
+"s33";410;1;"Aberg-Wisted2000";"Paroxetine";177;112
+"s34";410;2;"Aberg-Wisted2000";"Sertraline";176;111
+"s36";411;2;"Moller2000";"Amitriptyline";124;71
+"s35";411;1;"Moller2000";"Sertraline";116;51
+"s38";412;2;"Lepine2000";"Clomipramine";84;54
+"s37";412;1;"Lepine2000";"Sertraline";82;53
+"s40";413;2;"Sir2005";"Sertraline";79;56
+"s39";413;1;"Sir2005";"Venlafaxine";84;56
+"s42";414;2;"Shelton2006 (NCT00179283)";"Sertraline";82;45
+"s41";414;1;"Shelton2006 (NCT00179283)";"Venlafaxine";78;49
+"t20";436;1;"Blacker1988";"Amitriptyline";44;29
+"t21";436;2;"Blacker1988";"Trazodone";112;58
+"t22";437;1;"Altamura1989b";"Amitriptyline";37;21
+"t23";437;2;"Altamura1989b";"Trazodone";36;21
+"t24";438;1;"Kasper2005b";"Paroxetine";53;48
+"t25";438;2;"Kasper2005b";"Trazodone";55;48
+"t26";439;1;"Munizza2006";"Sertraline";60;37
+"t27";439;2;"Munizza2006";"Trazodone";62;46
+"v033";457;1;"Clerc1994";"Fluoxetine";34;17
+"v034";457;2;"Clerc1994";"Venlafaxine";34;24
+"v039";460;1;"Dierick1996";"Fluoxetine";161;95
+"v040";460;2;"Dierick1996";"Venlafaxine";153;107
+"v048";464;1;"Tylee1997";"Fluoxetine";170;58
+"v049";464;2;"Tylee1997";"Venlafaxine";171;67
+"v050";465;1;"Hackett1998";"Fluvoxamine";34;14
+"v051";465;2;"Hackett1998";"Venlafaxine";77;48
+"v052";466;1;"Costaesilva1998";"Fluoxetine";186;153
+"v053";466;2;"Costaesilva1998";"Venlafaxine";196;170
+"v054";467;1;"McPartlin1998";"Paroxetine";178;117
+"v055";467;2;"McPartlin1998";"Venlafaxine";183;130
+"v057";468;2;"Samuelian1998";"Clomipramine";50;20
+"v056";468;1;"Samuelian1998";"Venlafaxine";52;30
+"v063";470;2;"Smeraldi1998";"Clomipramine";58;40
+"v064";470;3;"Smeraldi1998";"Trazodone";57;33
+"v062";470;1;"Smeraldi1998";"Venlafaxine";55;41
+"v069";472;1;"Alves1999";"Fluoxetine";47;40
+"v070";472;2;"Alves1999";"Venlafaxine";40;34
+"v077";475;1;"Mehtonen2000";"Sertraline";72;41
+"v078";475;2;"Mehtonen2000";"Venlafaxine";75;49
+"v079";476;1;"Tzanakaki2000";"Fluoxetine";54;33
+"v080";476;2;"Tzanakaki2000";"Venlafaxine";55;38
+"v082";477;2;"Gentil2000";"Amitriptyline";59;44
+"v081";477;1;"Gentil2000";"Venlafaxine";57;43
+"v083";478;1;"Casabona2002 (0600B 428)";"Paroxetine";56;29
+"v084";478;2;"Casabona2002 (0600B 428)";"Venlafaxine";58;43
+"v086";479;2;"Sauer2003";"Amitriptyline";77;35
+"v085";479;1;"Sauer2003";"Venlafaxine";79;30
+"v087";480;1;"Allard2004";"Citalopram";75;50
+"v088";480;2;"Allard2004";"Venlafaxine";76;49
+"v095";483;1;"Keller2007 (NCT00046020)";"Fluoxetine";275;210
+"v096";483;2;"Keller2007 (NCT00046020)";"Venlafaxine";821;612
+"v109";488;2;"Hosseini2015 (IRCT201203048513N1.)";"Citalopram";25;21
+"v108";488;1;"Hosseini2015 (IRCT201203048513N1.)";"Venlafaxine";28;12
+"v116";491;2;"Heller2009(NCT00909155)";"Fluoxetine";14;8
+"v115";491;1;"Heller2009(NCT00909155)";"Venlafaxine";15;9
+"v117";492;1;"Chang 2015";"Fluoxetine";58;41
+"v118";492;2;"Chang 2015";"Venlafaxine";54;38
+"vo48";516;2;"Wang2015 (NCT01571453, KCT0000432, 13926A)";"Venlafaxine";230;132
+"vo47";516;1;"Wang2015 (NCT01571453, KCT0000432, 13926A)";"Vortioxetine";213;139
