@@ -1,4 +1,4 @@
-setwd('D:/OneDrive - 國立台灣大學/110 科技部大專生/Open resources/')
+setwd('C:/Users/hsnutardis/OneDrive - 國立台灣大學/2023 學士班論文/NMA-Robustness-Visualization/')
 
 source("./flow_contribution/R/streamstatistics2.R")
 source("./flow_contribution/R/hatmatrix.R")
@@ -11,11 +11,12 @@ source("./contrast_robustnetplot.R")
 
 source("./contrast_robustnetplot.R")
 
-
+install.packages('netmeta')
+library(netmeta)
 
 ######
 
-## data exmaple
+## data example
 indata <- read.csv("./example data/diabetes.csv", fileEncoding="UTF-8-BOM")
 comparison <- 'ACE:Placebo'
 comparison <- 'ACE:ARB'

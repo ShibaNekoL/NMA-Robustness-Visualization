@@ -29,7 +29,8 @@ getComparisonContribution <- function(hatmatrix, comparison){
 
   g <- graph_from_edgelist(edgeList , directed=FALSE)
   g <- set.vertex.attribute(g,'label',value = V(g))
-  g <- set.edge.attribute(g,'label',value = E(g))
+  g <- set.edge.attribute(g,'label',value = 1:dim(edgeList)[1])
+  # g <- set.edge.attribute(g,'label',value = E(g))
   # print(V(g)$label)
   # print(E(g)$label)
 
@@ -64,7 +65,8 @@ getComparisonContribution <- function(hatmatrix, comparison){
     E(dg)[]$flow <- abs(hatMatrix[comparison,])
     V(dg)[]$label <- V(dg)[]$name
     # E(dg)[]$label <- E(dg)[]$flow
-    dg <- set.edge.attribute(dg,'label',value = E(dg))
+    dg <- set.edge.attribute(dg,'label',value = 1:dim(dedgeList)[1])
+    # dg <- set.edge.attribute(dg,'label',value = E(dg))
     # print(c("isdirected",is.directed(dg)))
     return(dg)
   }
