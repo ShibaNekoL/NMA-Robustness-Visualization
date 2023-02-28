@@ -10,9 +10,10 @@ source("./robustnetplot.R")
 source("./contrast_robustnetplot.R")
 
 source("./contrast_robustnetplot.R")
+library(netmeta)
 
 install.packages('netmeta')
-library(netmeta)
+
 
 ######
 

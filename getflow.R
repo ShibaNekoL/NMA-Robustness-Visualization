@@ -1,6 +1,6 @@
 ##### get.streams_df
 
-get.streams_df <- function(hatmatrix, comparison){
+get.streams_df <- function(indata, hatmatrix, comparison){
     
     source("./flow_contribution/R/hatmatrix.R")
     source("./flow_contribution/R/streamStatistics2.R")
@@ -70,7 +70,7 @@ get.streams_df <- function(hatmatrix, comparison){
 
 ##### get.studies_df
 
-get.studies_df <- function(hatmatrix, comparison){
+get.studies_df <- function(indata, hatmatrix, comparison){
     
     library(igraph)
     source("./flow_contribution/R/hatmatrix.R")
@@ -80,7 +80,7 @@ get.studies_df <- function(hatmatrix, comparison){
     
     ### read contents
     studiesstat <- getStudyContribution(hatmatrix, comparison)
-    streams_df <- get.streams_df(hatmatrix, comparison)
+    streams_df <- get.streams_df(indata, hatmatrix, comparison)
     
     
     ### StudyContributionPerFlow: a new dataframe merge with streams_df and studiesstat

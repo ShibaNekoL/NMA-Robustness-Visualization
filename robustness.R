@@ -9,7 +9,7 @@ get.studies_rob <- function(indata, hatmatrix, comparison){
     study_rob <- study_rob[!duplicated(study_rob),]
     
     ### studies_df: dataframe from merge studies_df & rob
-    studies_df <- merge(get.studies_df(hatmatrix, comparison)[[1]], study_rob, by.x="study", by.y="id", all.x=T)
+    studies_df <- merge(get.studies_df(indata, hatmatrix, comparison)[[1]], study_rob, by.x="study", by.y="id", all.x=T)
     
     # reorder by path
     studies_df <- arrange(studies_df, path)
