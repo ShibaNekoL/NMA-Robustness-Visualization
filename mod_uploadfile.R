@@ -13,7 +13,7 @@ uploadfileUI <- function(id) {
   
   tagList(
     # App title ----
-    titlePanel("Uploading File"),
+    titlePanel("Upload File"),
     
     # Sidebar layout with input and output definitions ----
     sidebarLayout(
@@ -22,7 +22,7 @@ uploadfileUI <- function(id) {
         # Input: Select a file ----
         fileInput(
           ns("file1"),
-          "Choose CSV File",
+          "Choose a CSV File",
           multiple = F,
           accept = c(
             "text/csv",
@@ -46,7 +46,8 @@ uploadfileUI <- function(id) {
             Semicolon = ";",
             Tab = "\t"
           ),
-          selected = ","
+          selected = ",",
+          inline=T
         ),
         
         # Input: Select quotes ----
@@ -58,7 +59,8 @@ uploadfileUI <- function(id) {
             "Double Quote" = '"',
             "Single Quote" = "'"
           ),
-          selected = ""
+          selected = "",
+          inline=T
         ),
         
         # # Horizontal line ----
@@ -77,7 +79,7 @@ uploadfileUI <- function(id) {
     hidden(
       tags$div(
         id = ns('selecting_columns_title'),
-        titlePanel("Selecting Columns")
+        titlePanel("Select Columns")
       )
     )
     ,
@@ -91,7 +93,8 @@ uploadfileUI <- function(id) {
           # "Wide Continuous" = "wide_continuous",
           "Long Binary" = "long_binary",
           "Long Continuous" = "long_continuous"),
-        selected = "long_binary"
+        selected = "long_binary",
+        inline=T
       )
     )
     ,
@@ -113,7 +116,8 @@ uploadfileUI <- function(id) {
             "MD" = "MD",
             "SMD" = "SMD",
             "ROM" = "ROM"
-          )
+          ),
+          inline=T
         )
       )
     )
@@ -191,7 +195,6 @@ uploadfileUI <- function(id) {
     hidden(
       actionButton(ns("btn_confirm"), "Start Analyzing")
     )
-
   )
 }
 

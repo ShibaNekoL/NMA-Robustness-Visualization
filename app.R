@@ -18,13 +18,10 @@ source("mod_networkrobustness.R")
 
 ui <- fluidPage(
   shinyjs::useShinyjs(),
-  uploadfileUI("uploadfile"),
-  hidden(
-    # Since hide and show in shinyjs can only control html element, instead of a module.
-    # I wrap the module with a div tag.
-    # I don't know why hidden also works on the module though.
-    div(
-      id="div.networkrobustbess", networkrobustbessUI("networkrobustbess")
+  
+  tabsetPanel(id = "tabs",
+    tabPanel("Upload file", fluid = TRUE, 
+      uploadfileUI("uploadfile")
     )
   )
 )
@@ -36,8 +33,6 @@ server <- function(input, output, session, uploadfile, networkrobustbess) {
   
   observe({
     if(uploadfile_vals$btn_confirm() > 0){
-      # print(uploadfile_vals$indata())
-      # print(uploadfile_vals$hatmatrix())
       
       indata <- uploadfile_vals$indata()
       hatmatrix <- uploadfile_vals$hatmatrix()
@@ -46,11 +41,27 @@ server <- function(input, output, session, uploadfile, networkrobustbess) {
                               indata = indata,
                               hatmatrix = hatmatrix
       )
-      show(id="div.networkrobustbess")
+      # show(id="div.networkrobustbess")
       
+      updateTabsetPanel(session, "tabs",
+                        selected = "Robustness of NMA")
+      
+      if(uploadfile_vals$btn_confirm() == 1){
+        
+        appendTab(inputId = "tabs",
+                  tabPanel("Robustness of NMA", fluid = TRUE,
+                           # hidden(
+                           # Since hide and show in shinyjs can only control html element, instead of a module.
+                           # I wrap the module with a div tag.
+                           # I don't know why hidden also works on the module though.
+                           div(
+                             id="div.networkrobustbess", networkrobustbessUI("networkrobustbess")
+                           )
+                  )
+        )
+      }
     }
   })
-
 }
 
 shinyApp(ui = ui, server = server)

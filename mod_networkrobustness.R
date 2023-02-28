@@ -16,47 +16,62 @@ networkrobustbessUI <- function(id) {
   tagList(
     # reset button for network robustness plot
     shinyjs::useShinyjs(),
-    # dataTableOutput(ns("table")),
-    actionButton(ns("resetplot"), "Reset"),
+
     
-    # stream robustness plot
-    visNetworkOutput(ns("visNetworkRobustness")),
-    # switch to highrisk
-    switchInput(
-      ns("highriskswitcher"),
-      "Highrisk",
-      onLabel = "ON",
-      offLabel = "OFF"
-    ),
-    # node size selector
-    selectInput(
-      ns("nodesize"),
-      "Node size by",
-      choices = c("Sample size", "Number of studies", "Equal size"),
-      selected = "Sample size"
-    ),
-    # edge width selector
-    selectInput(
-      ns("edgewidth"),
-      "Edge width by",
-      choices = c(
-        "Robustness",
-        "Robustness (inverse)",
-        "Sample size",
-        "Number of studies",
-        "Equal size"
-      ),
-      selected = "Robustness"
-    ),
-    # slider filter robustness
-    sliderInput(
-      ns("filterrobustness"),
-      "Fliter contrasts by robustness: ",
-      min = 0,
-      max = 1,
-      value = c(0, 1)
-    ),
+    # App title ----
+    titlePanel("Robustness of NMA Estimate"),
+    # Sidebar layout with input and output definitions ----
+    sidebarLayout(
+      # Sidebar panel for inputs ----
+      sidebarPanel(
     
+        # dataTableOutput(ns("table")),
+        actionButton(ns("resetplot"), "Reset"),
+        tags$hr(),
+        
+        # switch to highrisk
+        switchInput(
+          ns("highriskswitcher"),
+          "Highrisk",
+          onLabel = "ON",
+          offLabel = "OFF"
+        ),
+        # node size selector
+        selectInput(
+          ns("nodesize"),
+          "Node size by",
+          choices = c("Sample size", "Number of studies", "Equal size"),
+          selected = "Sample size"
+        ),
+        # edge width selector
+        selectInput(
+          ns("edgewidth"),
+          "Edge width by",
+          choices = c(
+            "Robustness",
+            "Robustness (inverse)",
+            "Sample size",
+            "Number of studies",
+            "Equal size"
+          ),
+          selected = "Robustness"
+        ),
+        # slider filter robustness
+        sliderInput(
+          ns("filterrobustness"),
+          "Fliter contrasts by robustness: ",
+          min = 0,
+          max = 1,
+          value = c(0, 1)
+        )
+      )
+      ,
+      # Main panel for displaying outputs ----
+      mainPanel(
+        # stream robustness plot
+        visNetworkOutput(ns("visNetworkRobustness"))
+        ),
+    ),
     # data table for contrast
     
     splitLayout(
@@ -77,7 +92,7 @@ networkrobustbessUI <- function(id) {
     # Input: Slider for the number of bins ----
     sliderInput(
       inputId = ns("bins"),
-      label = "Interval length:",
+      label = "Bins:",
       min = 2,
       max = 50,
       value = 5
@@ -497,7 +512,8 @@ networkrobustbessServer <- function(id, indata, hatmatrix) {
 
                  output$visselected <- renderDataTable({
                    # datatable(dt_visselect(myEdge$selected, filterrobust$value), caption="Selected contrasts")
-                   datatable(df1(), caption = "Selected contrasts")
+                   datatable(df1(), caption = "Selected contrasts"
+                             , options = list(pageLength = 5))
                  })
                  # output$invisselected <- renderDataTable({
                  #     # datatable(dt_invisselect(myEdge$selected, filterrobust$value), caption="Selected contrasts")
@@ -505,7 +521,8 @@ networkrobustbessServer <- function(id, indata, hatmatrix) {
                  # })
                  output$visunselected <- renderDataTable({
                    # datatable(dt_visunselect(myEdge$selected, filterrobust$value), caption="Unselected contrasts")
-                   datatable(df3(), caption = "Unselected contrasts")
+                   datatable(df3(), caption = "Unselected contrasts"
+                             , options = list(pageLength = 5))
                  })
                  # output$invisunselected <- renderDataTable({
                  #     # datatable(dt_invisunselect(myEdge$selected, filterrobust$value), caption="Unselected contrasts")
@@ -657,14 +674,16 @@ networkrobustbessServer <- function(id, indata, hatmatrix) {
                    # reset data table to show whole table
                    output$visselected <- renderDataTable({
                      datatable(dt_visselect(myEdge$selected, filterrobust$value),
-                               caption = "Selected contrasts")
+                               caption = "Selected contrasts"
+                               , options = list(pageLength = 5))
                    })
                    # output$invisselected <- renderDataTable({
                    #     datatable(dt_invisselect(myEdge$selected, filterrobust$value), caption="Selected contrasts")
                    # })
                    output$visunselected <- renderDataTable({
                      datatable(dt_visunselect(myEdge$selected, filterrobust$value),
-                               caption = "Unselected contrasts")
+                               caption = "Unselected contrasts"
+                               , options = list(pageLength = 5))
                    })
                    # output$invisunselected <- renderDataTable({
                    #     datatable(dt_invisunselect(myEdge$selected, filterrobust$value), caption="Unselected contrasts")
