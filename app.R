@@ -73,28 +73,6 @@ server <- function(input, output, session, uploadfile, networkrobustbess) {
 
       observeEvent(networkrobustbess_vals$btn_contrasts(), {
         edges <- networkrobustbess_vals$edge.selected()
-        # # for(e in edges){
-        # 
-        #   streamrobustbessServer(
-        #     
-        #     id="BBlockerCCBtestserver",
-        #     indata=indata,
-        #     hatmatrix=hatmatrix,
-        #     comparison=edges[1]
-        #   )
-        #   appendTab(inputId = "tabs",
-        #             tabPanel("test", streamrobustbessUI("BBlockerCCBtestserver"))
-        #   )
-        # # }
-        #   # streamrobustbessServer(
-        #   #   id="testserver2",
-        #   #   indata=indata,
-        #   #   hatmatrix=hatmatrix,
-        #   #   comparison=edges[2]
-        #   # )
-        #   # appendTab(inputId = "tabs",
-        #   #           tabPanel("test2", streamrobustbessUI("testserver2"))
-        #   # )
         
         appendTab(inputId = "tabs",
                   navbarMenu("Contrast Robustness")

@@ -14,31 +14,41 @@ streamrobustbessUI <- function(id) {
   tagList(
     # reset button for stream robustness plot
     shinyjs::useShinyjs(),
-    actionButton(ns("resetplot"), "Reset"),
-
-    # stream robustness plot
-    visNetworkOutput(ns("visStreamRobustness")),
-
-    # switch to highrisk
-    switchInput(ns("highriskswitcher"), "Highrisk", onLabel = "ON", offLabel = "OFF"),
-
-    # node size selector
-    selectInput(ns("nodesize"), "Node size by", choices=c("Sample size", "Number of studies", "Equal size"), selected="Sample size"),
-
-    # edge width selector
-    selectInput(ns("edgewidth"), "Edge width by", choices=c("Stream contribution", "Equal width"), selected="Stream Contribution"),
-
-    # slider filter robustness
-    sliderInput(ns("streamfilterrobustness"), "Fliter streams by robustness: ",
-                min=0,
-                max=1,
-                value=c(0,1)),
-    # slider filter contribution
-    sliderInput(ns("streamfiltercontribution"), "Fliter streams by contribution: ",
-                min=0,
-                max=1,
-                value=c(0,1)),
     
+    # App title ----
+    titlePanel("Contrasts Robustness"),
+    # Sidebar layout with input and output definitions ----
+    sidebarLayout(
+      # Sidebar panel for inputs ----
+      sidebarPanel(
+        actionButton(ns("resetplot"), "Reset"),
+        tags$hr(),
+    
+        # switch to highrisk
+        switchInput(ns("highriskswitcher"), "Highrisk", onLabel = "ON", offLabel = "OFF"),
+    
+        # node size selector
+        selectInput(ns("nodesize"), "Node size by", choices=c("Sample size", "Number of studies", "Equal size"), selected="Sample size"),
+    
+        # edge width selector
+        selectInput(ns("edgewidth"), "Edge width by", choices=c("Stream contribution", "Equal width"), selected="Stream Contribution"),
+    
+        # slider filter robustness
+        sliderInput(ns("streamfilterrobustness"), "Fliter streams by robustness: ",
+                    min=0,
+                    max=1,
+                    value=c(0,1)),
+        # slider filter contribution
+        sliderInput(ns("streamfiltercontribution"), "Fliter streams by contribution: ",
+                    min=0,
+                    max=1,
+                    value=c(0,1))
+      ),
+      mainPanel(
+        # stream robustness plot
+        visNetworkOutput(ns("visStreamRobustness"))
+      )
+    ),
     # data table for streams
     # data table for contrast
     
@@ -357,7 +367,7 @@ streamrobustbessServer <- function(id, indata, hatmatrix, comparison){
 
       output$visselected <- renderDataTable({
           # datatable(dt_visselect(myEdge$selected, filterrobust$value), caption="Selected contrasts")
-          datatable(df1())
+          datatable(df1(), options = list(pageLength = 5))
       })
       # output$invisselected <- renderDataTable({
       #     # datatable(dt_invisselect(myEdge$selected, filterrobust$value), caption="Selected contrasts")
@@ -365,7 +375,7 @@ streamrobustbessServer <- function(id, indata, hatmatrix, comparison){
       # })
       output$visunselected <- renderDataTable({
           # datatable(dt_visunselect(myEdge$selected, filterrobust$value), caption="Unselected contrasts")
-          datatable(df3())
+          datatable(df3(), options = list(pageLength = 5))
       })
       # output$invisunselected <- renderDataTable({
       #     # datatable(dt_invisunselect(myEdge$selected, filterrobust$value), caption="Unselected contrasts")
@@ -476,10 +486,10 @@ streamrobustbessServer <- function(id, indata, hatmatrix, comparison){
 
           # reset data table
           output$visselected <- renderDataTable({
-              datatable(dt_visselect(path_id$selected, filterrobust$value, filtercontri$value), caption="Selected Streams")
+              datatable(dt_visselect(path_id$selected, filterrobust$value, filtercontri$value), caption="Selected Streams", options = list(pageLength = 5))
           })
           output$visunselected <- renderDataTable({
-              datatable(dt_visunselect(path_id$selected, filterrobust$value, filtercontri$value), caption="Unselected Streams")
+              datatable(dt_visunselect(path_id$selected, filterrobust$value, filtercontri$value), caption="Unselected Streams", options = list(pageLength = 5))
           })
       })
     }

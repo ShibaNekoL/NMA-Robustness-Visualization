@@ -24,12 +24,12 @@ streamrobServer <- function(id, stringsAsFactors){
   )
 }
 
-ui <- fluidPage(
-  streamrobUI("streamrob")
-)
-
-server <- function(input, output, session) {
-  streamrobServer("streamrob")
-}
-
-shinyApp(ui = ui, server = server)
+# ui <- fluidPage(
+#   streamrobUI("streamrob")
+# )
+# 
+# server <- function(input, output, session) {
+#   streamrobServer("streamrob")
+# }
+# 
+# shinyApp(ui = ui, server = server)
