@@ -21,6 +21,7 @@ install.packages('netmeta')
 indata <- read.csv("./example data/diabetes.csv", fileEncoding="UTF-8-BOM")
 comparison <- 'ACE:Placebo'
 comparison <- 'ACE:ARB'
+comparison <- 'BBlocker:CCB'
 hatmatrix <- getHatMatrix(indata, type="long_binary", model="random", sm='OR')
 
 ##

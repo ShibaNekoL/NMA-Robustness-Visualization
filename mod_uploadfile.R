@@ -367,7 +367,8 @@ uploadfileServer <- function(id, stringsAsFactors) {
 
                  return(list(indata = newdata,
                             hatmatrix = hatmatrix,
-                            btn_confirm = reactive(input$btn_confirm)
+                            btn_confirm = reactive(input$btn_confirm),
+                            sm = reactive(input$box_sm)
                           )
                         )
                  

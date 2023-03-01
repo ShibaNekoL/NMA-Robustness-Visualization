@@ -88,6 +88,11 @@ networkrobustbessUI <- function(id) {
     #     dataTableOutput("invisselected"),
     #     dataTableOutput("invisunselected")
     # )
+    actionButton(ns("btn_contrasts"), "Analyze selected contrasts"),
+    
+    tags$hr(),
+
+    titlePanel("Descriptive Analysis"),
     
     # Input: Slider for the number of bins ----
     sliderInput(
@@ -103,7 +108,7 @@ networkrobustbessUI <- function(id) {
 }
 
 
-networkrobustbessServer <- function(id, indata, hatmatrix) {
+networkrobustbessServer <- function(id, indata, hatmatrix, sm) {
   moduleServer(id,
                ## Below is the module function
                function(input, output, session) {
@@ -117,6 +122,7 @@ networkrobustbessServer <- function(id, indata, hatmatrix) {
                    get.interactive.contrast_robust_plot(
                      indata,
                      hatmatrix,
+                     sm,
                      highrisk = F,
                      nodesizeby = 1,
                      edgesizeby = 0
@@ -706,6 +712,12 @@ networkrobustbessServer <- function(id, indata, hatmatrix) {
                    )
                  })
                  
+                 return(list(
+                   btn_contrasts = reactive(input$btn_contrasts)
+                   ,
+                   edge.selected = reactive(df1()$Contrast)
+                   )
+                  )
                })
 }
 

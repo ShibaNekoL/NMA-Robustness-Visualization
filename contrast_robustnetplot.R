@@ -84,7 +84,7 @@ get.contrast_robust_plot <- function(indata, hatmatrix){
 
 
 ##### interactive
-get.interactive.contrast_robust_plot <- function(indata, hatmatrix, highrisk=F, nodesizeby=1, edgesizeby=0){
+get.interactive.contrast_robust_plot <- function(indata, hatmatrix, sm, highrisk=F, nodesizeby=1, edgesizeby=0){
     source("./robustness.R")
     library(dplyr)
     library(igraph)
@@ -149,7 +149,7 @@ get.interactive.contrast_robust_plot <- function(indata, hatmatrix, highrisk=F, 
     ### count edge trials for width ----
     indata$t<-as.factor(indata$t)
     # 注意這邊OR到時候要改成輸入式參數
-    indata_wide <- pairwise(treat=t, event=r, n=n, studlab=id, data=indata, sm="OR")
+    indata_wide <- pairwise(treat=t, event=r, n=n, studlab=id, data=indata, sm=sm)
     
     indata_wide$pair <- paste0(indata_wide$t1, ":", indata_wide$t2)
     
