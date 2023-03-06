@@ -84,16 +84,28 @@ server <- function(input, output, session, uploadfile, networkrobustbess) {
 
         i = 1
         for(e in edges){
-          server <- streamrobustbessServer(
+          streamrobustbessServer(
             # Don't use ":" in server id! It took me 3 hours to debug. ;-;
-            id=paste0("server_", i),
+            id=paste0("robust_server_", i),
             indata=indata,
             hatmatrix=hatmatrix,
             comparison=e
             )
+          
+          streamrobServer(
+                      # Don't use ":" in server id! It took me 3 hours to debug. ;-;
+                      id=paste0("rob_server_", i),
+                      indata=indata,
+                      hatmatrix=hatmatrix,
+                      comparison=e
+                      )
 
           appendTab(inputId = "tabs",
-                    tabPanel(e, streamrobustbessUI(paste0("server_", i))),
+                    tabPanel(title = e, 
+                             streamrobustbessUI(paste0("robust_server_", i)), 
+                             titlePanel("Stream Risk of Bias Bar Plot"),
+                             streamrobUI(paste0("rob_server_", i))
+                             ),
                     menuName = "Contrast Robustness"
                     # navbarMenu(id = "Contrast Robustness",
                     #            tabPanel(edges, streamrobustbessUI(edges[1]))

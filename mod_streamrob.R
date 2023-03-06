@@ -12,7 +12,7 @@ streamrobUI <- function(id) {
   plotlyOutput(ns("streamrob"))
 }
 
-streamrobServer <- function(id, stringsAsFactors){
+streamrobServer <- function(id, indata, hatmatrix, comparison){
   moduleServer(
     id,
     ## Below is the module function

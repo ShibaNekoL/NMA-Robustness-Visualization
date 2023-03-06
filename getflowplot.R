@@ -74,8 +74,8 @@ getflowplot <- function(indata, hatmatrix, comparison){
                  aes(x=reorder(path, flow), y=study.cont, fill = rob 
                      
                      ### 2 ways to customize tooltip
-                     ## 1. use label, label2, labe3...
-                     # label=study, label2=study.cont, label3=rob)
+                     ## 1. use label, label2, label3...
+                     # label1=study, label2=study.cont, label3=rob)
                      )) + #, alpha=study.cont
         geom_point(data=t_df_pos, 
                    aes(x=reorder(path, flow), y=cumulativeflow),
@@ -109,7 +109,14 @@ getflowplot <- function(indata, hatmatrix, comparison){
     # since they are divided into 3 rob groups
     for(i in 1:3){
         reorder_df_groupbyrob <- reorder_df[which(reorder_df$rob==i),]
-        interactive.flowplot$x$data[[i]]$text <- paste0("Study ID: ", reorder_df_groupbyrob$study,
+        if(i == 1){
+          n <- 1
+        } else if (i == 2){
+          n <- 3
+        } else if (i == 3){
+          n <- 2
+        }
+        interactive.flowplot$x$data[[n]]$text <- paste0("Study ID: ", reorder_df_groupbyrob$study,
                                                         "<br>", reorder_df_groupbyrob$contrastinflow,
                                                         "<br>Contribution: ", round(reorder_df_groupbyrob$study.cont, 2),
                                                         "<br>ROB: ", reorder_df_groupbyrob$rob

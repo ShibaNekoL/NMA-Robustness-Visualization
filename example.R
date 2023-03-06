@@ -34,7 +34,7 @@ View(get.streams_df(hatmatrix, comparison))
 View(get.studies_df(hatmatrix, comparison)$StudyContributionPerFlow)
 View(get.studies_df(hatmatrix, comparison)$StudyReport)
 
-getflowplot(indata, hatmatrix,comparison)
+getflowplot(indata, hatmatrix, comparison)
 
 View(get.robustness(indata, hatmatrix,comparison)$allvariables)
 View(get.robustness(indata, hatmatrix,comparison)$robustness_df)

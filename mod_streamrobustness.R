@@ -16,7 +16,7 @@ streamrobustbessUI <- function(id) {
     shinyjs::useShinyjs(),
     
     # App title ----
-    titlePanel("Contrasts Robustness"),
+    titlePanel("Contrast Robustness Network Graph"),
     # Sidebar layout with input and output definitions ----
     sidebarLayout(
       # Sidebar panel for inputs ----
@@ -34,12 +34,12 @@ streamrobustbessUI <- function(id) {
         selectInput(ns("edgewidth"), "Edge width by", choices=c("Stream contribution", "Equal width"), selected="Stream Contribution"),
     
         # slider filter robustness
-        sliderInput(ns("streamfilterrobustness"), "Fliter streams by robustness: ",
+        sliderInput(ns("streamfilterrobustness"), "Filter streams by robustness: ",
                     min=0,
                     max=1,
                     value=c(0,1)),
         # slider filter contribution
-        sliderInput(ns("streamfiltercontribution"), "Fliter streams by contribution: ",
+        sliderInput(ns("streamfiltercontribution"), "Filter streams by contribution: ",
                     min=0,
                     max=1,
                     value=c(0,1))
@@ -65,8 +65,10 @@ streamrobustbessUI <- function(id) {
     splitLayout(
         dataTableOutput(ns("visselected")),
         dataTableOutput(ns("visunselected"))
-    )
+    ),
+    tags$hr()
   )
+  
 }
 
 streamrobustbessServer <- function(id, indata, hatmatrix, comparison){
