@@ -9,6 +9,7 @@ source("./contrast_robustnetplot.R")
 
 library(netmeta)
 library(shinyjs)
+library(shinybusy)
 
 source("mod_uploadfile.R")
 source("mod_streamrob.R")
@@ -18,7 +19,7 @@ source("mod_networkrobustness.R")
 
 ui <- fluidPage(
   shinyjs::useShinyjs(),
-  
+  add_busy_bar(color = "#0dc5c1"),
   tabsetPanel(id = "tabs",
     tabPanel("Upload file", fluid = TRUE, 
       uploadfileUI("uploadfile")
@@ -69,58 +70,62 @@ server <- function(input, output, session, uploadfile, networkrobustbess) {
       }
       
       
-      # create tab 3 dropdown
+      # create tab 3 dropdown ----
 
       observeEvent(networkrobustbess_vals$btn_contrasts(), {
         edges <- networkrobustbess_vals$edge.selected()
         
-        appendTab(inputId = "tabs",
-                  navbarMenu("Contrast Robustness")
-        )
-        hideTab("tabs", "Contrast Robustness")
-
-        # print(networkrobustbess_vals$edge.selected())
-        edges <- networkrobustbess_vals$edge.selected()
-
-        i = 1
-        for(e in edges){
-          streamrobustbessServer(
-            # Don't use ":" in server id! It took me 3 hours to debug. ;-;
-            id=paste0("robust_server_", i),
-            indata=indata,
-            hatmatrix=hatmatrix,
-            comparison=e
-            )
+        if (length(edges) > 0){
+          removeTab(inputId = "tabs", target = "Contrast Robustness")
           
-          streamrobServer(
-                      # Don't use ":" in server id! It took me 3 hours to debug. ;-;
-                      id=paste0("rob_server_", i),
-                      indata=indata,
-                      hatmatrix=hatmatrix,
-                      comparison=e
-                      )
-
           appendTab(inputId = "tabs",
-                    tabPanel(title = e, 
-                             streamrobustbessUI(paste0("robust_server_", i)), 
-                             titlePanel("Stream Risk of Bias Bar Plot"),
-                             streamrobUI(paste0("rob_server_", i))
-                             ),
-                    menuName = "Contrast Robustness"
-                    # navbarMenu(id = "Contrast Robustness",
-                    #            tabPanel(edges, streamrobustbessUI(edges[1]))
-                    # )
-                    )
-          i = i+ 1
+                    navbarMenu("Contrast Robustness")
+          )
+          hideTab("tabs", "Contrast Robustness")
+          
+          # print(networkrobustbess_vals$edge.selected())
+          
+          
+          i = 1
+          for(e in edges){
+            streamrobustbessServer(
+              # Don't use ":" in server id! It took me 3 hours to debug. ;-;
+              id=paste0("robust_server_", i),
+              indata=indata,
+              hatmatrix=hatmatrix,
+              comparison=e
+            )
+            
+            streamrobServer(
+              # Don't use ":" in server id! It took me 3 hours to debug. ;-;
+              id=paste0("rob_server_", i),
+              indata=indata,
+              hatmatrix=hatmatrix,
+              comparison=e
+            )
+            
+            appendTab(inputId = "tabs",
+                      tabPanel(title = e, 
+                               streamrobustbessUI(paste0("robust_server_", i)), 
+                               titlePanel("Stream Risk of Bias Bar Plot"),
+                               streamrobUI(paste0("rob_server_", i))
+                      ),
+                      menuName = "Contrast Robustness"
+                      # navbarMenu(id = "Contrast Robustness",
+                      #            tabPanel(edges, streamrobustbessUI(edges[1]))
+                      # )
+            )
+            i = i + 1
+          }
+          
+          showTab("tabs", "Contrast Robustness")
+          
+          # Go to tab 3
+          updateTabsetPanel(session, "tabs",
+                            selected = edges[1])
         }
-
-        showTab("tabs", "Contrast Robustness")
-
-        # Go to tab 3
-        updateTabsetPanel(session, "tabs",
-                          selected = edges[1])
+        
       })
-      
     }
 
   })
