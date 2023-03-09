@@ -148,7 +148,7 @@ getRandomComparisonContribution <- function(c1, comparison){
                 randomedge = sample(newneis,1)
                 newacc = list.append(acc,randomedge)
               }else{
-                browser()
+                # browser()
                 newacc = acc
               }
             }

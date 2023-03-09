@@ -1,4 +1,4 @@
-library(shiny)
+# library(shiny)
 library(DT)
 library(shinyjs)
 library(dplyr)
@@ -14,6 +14,8 @@ uploadfileUI <- function(id) {
   tagList(
     # App title ----
     titlePanel("Upload File"),
+    
+    # textOutput("text"),
     
     # Sidebar layout with input and output definitions ----
     sidebarLayout(
@@ -203,6 +205,9 @@ uploadfileServer <- function(id, stringsAsFactors) {
   moduleServer(id,
                ## Below is the module function ----
                function(input, output, session) {
+                 
+                 # output$text <- renderText({ getwd() })
+                 
                  observeEvent(input$file1, {
                    # data <- input$file1
                    

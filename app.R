@@ -10,11 +10,12 @@ source("./contrast_robustnetplot.R")
 library(netmeta)
 library(shinyjs)
 library(shinybusy)
+library(plyr); library(dplyr)
 
-source("mod_uploadfile.R")
-source("mod_streamrob.R")
-source("mod_streamrobustness.R")
-source("mod_networkrobustness.R")
+source("./mod_uploadfile.R")
+source("./mod_streamrob.R")
+source("./mod_streamrobustness.R")
+source("./mod_networkrobustness.R")
 
 
 ui <- fluidPage(
@@ -88,13 +89,13 @@ server <- function(input, output, session, uploadfile, networkrobustbess) {
           
           i = 1
           for(e in edges){
-            # streamrobustbessServer(
-            #   # Don't use ":" in server id! It took me 3 hours to debug. ;-;
-            #   id=paste0("robust_server_", i),
-            #   indata=indata,
-            #   hatmatrix=hatmatrix,
-            #   comparison=e
-            # )
+            streamrobustbessServer(
+              # Don't use ":" in server id! It took me 3 hours to debug. ;-;
+              id=paste0("robust_server_", i),
+              indata=indata,
+              hatmatrix=hatmatrix,
+              comparison=e
+            )
 
             streamrobServer(
               # Don't use ":" in server id! It took me 3 hours to debug. ;-;
