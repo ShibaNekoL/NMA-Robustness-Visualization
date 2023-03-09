@@ -23,7 +23,7 @@ getHatMatrix <- function(indata,type,model="fixed",tau=NA, sm){
   }
 
   if (type=="long_continuous"){
-    Dpairs=pairwise(treat=t,mean=y,sd=sd,n=n,data=D, studlab =id, sm=sm)
+    Dpairs=pairwise(treat=t,mean=y,sd=sd,n=n,data=D, studlab = id, sm=sm)
     metaNetw<-netmeta(TE,seTE,treat1,treat2,studlab,data=Dpairs,sm=sm,fixed =F,random = T, tol.multiarm=0.05)
   }
 

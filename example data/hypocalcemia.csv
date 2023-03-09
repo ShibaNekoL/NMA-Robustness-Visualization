@@ -1,8 +1,8 @@
 ﻿Unique Study ID,t,id,r,n,Risk of bias due to attrition,rob
-Charytan 2005,Cinacalcet,7,4,27,High,3
+Charytan 2005,Cinacalcet,7,4,27,Medium,2
 ADVANCE 2011,Vitamin D,15,1,180,High,3
 Ureña-Torres 2013,Vitamin D,22,1,154,Low,1
-Charytan 2005,Placebo,7,0,27,High,3
+Charytan 2005,Placebo,7,0,27,Medium,2
 IMPACT SPHT 2012 (IV stratum),Vitamin D,18,0,62,High,3
 IMPACT SPHT 2012 (Oral stratum),Cinacalcet + low dose vitamin D,19,18,70,High,3
 Ureña-Torres 2013,Cinacalcet + low dose vitamin D,22,25,155,Low,1
@@ -30,7 +30,7 @@ Block 2004,Placebo,5,4,369,High,3
 ACHIEVE 2008,Cinacalcet + low dose vitamin D,9,6,87,High,3
 ACHIEVE 2008,Vitamin D,9,0,86,High,3
 Akiba 2008,Placebo,10,0,30,Low,1
-Akiba 2008,Cinacalcet,10,9,90,High,3
+Akiba 2008,Cinacalcet,10,9,90,Low,1
 Fugakawa 2008,Placebo,11,0,71,Low,1
 Fugakawa 2008,Cinacalcet,11,4,72,Low,1
 OPTIMA 2008,Cinacalcet,13,18,365,High,3

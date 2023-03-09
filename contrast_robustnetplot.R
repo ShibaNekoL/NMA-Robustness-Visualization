@@ -6,7 +6,6 @@ get.contrast_robust_plot <- function(indata, hatmatrix){
     library(igraph)
     library(ggraph)
     library(tidygraph)
-    
 
     ### create node data
     nodes <- aggregate(subset(indata, select=c("r", "n")), by=list(indata$t), FUN=sum)
@@ -145,18 +144,44 @@ get.interactive.contrast_robust_plot <- function(indata, hatmatrix, sm, highrisk
     ### edges attribution---------------------------------------------------
     vis.links <- edges
     
-    
     ### count edge trials for width ----
     indata$t<-as.factor(indata$t)
-    # 注意這邊OR到時候要改成輸入式參數
+    # 注意這邊sm="OR"到時候要改成輸入式參數
     indata_wide <- pairwise(treat=t, event=r, n=n, studlab=id, data=indata, sm=sm)
     
     indata_wide$pair <- paste0(indata_wide$t1, ":", indata_wide$t2)
     
     # add sample size, number of studies
     vis.links$n <- vis.nodes[vis.links$from, ]$n + vis.nodes[vis.links$to, ]$n
-    vis.links$trials <- as.vector(table(indata_wide$pair)[vis.links$contrast])
+
+    treatment_trials <- as.data.frame(with(indata_wide, table(treat1,treat2)))
+    treatment_trials$treat1 <- as.character(treatment_trials$treat1)
+    treatment_trials$treat2 <- as.character(treatment_trials$treat2)
+
+    treatment_trials <- treatment_trials[treatment_trials$treat1 != treatment_trials$treat2, ]
+    treatment_trials <- treatment_trials[treatment_trials$Freq != 0,]
+
+    treatment_trials$tt1 <- paste0(treatment_trials$treat1, ":", treatment_trials$treat2)
+    treatment_trials$tt2 <- paste0(treatment_trials$treat2, ":", treatment_trials$treat1)
+    treatment_trials_for_merge_1 <- treatment_trials[,c("tt1", "Freq")]
+    treatment_trials_for_merge_2 <- treatment_trials[,c("tt2", "Freq")]
+
+    vis.links <- merge(vis.links, treatment_trials_for_merge_1,
+          by.x = "contrast", by.y = "tt1", all.x = TRUE
+    )
+    vis.links <- merge(vis.links, treatment_trials_for_merge_2,
+         by.x = "contrast", by.y = "tt2", all.x = TRUE
+    )
+    
+    vis.links$Freq.x[which(is.na(vis.links$Freq.x))] <- 0
+    vis.links$Freq.y[which(is.na(vis.links$Freq.y))] <- 0
+    
+    vis.links$trials <- vis.links$Freq.x + vis.links$Freq.y
+
     vis.links$trials[which(is.na(vis.links$trials))] <- 0
+    
+    # vis.links$trials <- as.vector(table(indata_wide$pair)[vis.links$contrast])
+    # vis.links$trials[which(is.na(vis.links$trials))] <- 0
     
     # width of edges ------
     # edge size by: Robustness(0), Sample size(1), Number of studies(2), Equal size(3)
@@ -196,7 +221,7 @@ get.interactive.contrast_robust_plot <- function(indata, hatmatrix, sm, highrisk
     colors_F <- c("darkred", "gold", "darkgreen")
     pal_F <- colorRampPalette(colors_F)(100)
 
-    vis.links$c_ref_F <- findInterval(vis.links$contrast_robust, seq(from = 0.1, to = 0.9, length.out = 100))
+    vis.links$c_ref_F <- findInterval(vis.links$contrast_robust, seq(from = 0.1, to = 0.9, length.out = 100), all.inside=T)
     vis.links$color_F <- pal_F[vis.links$c_ref_F]
     
     # T
@@ -213,7 +238,7 @@ get.interactive.contrast_robust_plot <- function(indata, hatmatrix, sm, highrisk
         alpha)
     
     # data rob range now c(0.1,0.9) converts to alpha c(0,1)
-    vis.links$c_ref_T <- findInterval(vis.links$contrast_robust, seq(from = 0.1, to = 0.9, length.out = 100))
+    vis.links$c_ref_T <- findInterval(vis.links$contrast_robust, seq(from = 0.1, to = 0.9, length.out = 100), all.inside=T)
     vis.links$color_T <- pal_T[vis.links$c_ref_T]
     
     if (highrisk==F) {

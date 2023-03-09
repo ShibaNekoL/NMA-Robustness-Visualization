@@ -56,9 +56,14 @@ getflowplot <- function(indata, hatmatrix, comparison){
     reorder_df$study <- as.integer(reorder_df$study)
     d_shareddata <- highlight_key(reorder_df, ~study)
     #t_df_pos_shareddata <- highlight_key(t_df_pos, ~treatment_name)
-        
-    # here we reorder x
-    plot <- ggplot() + 
+    
+    ## 1
+    if( (1 %in% reorder_df$rob) & 
+        (!2 %in% reorder_df$rob) &
+        (!3 %in% reorder_df$rob))
+    {
+      # here we reorder x
+      plot <- ggplot() + 
         
         # text
         ggtitle(paste0("Contrast Estimate ",reorder_df$comparison[1])) +
@@ -71,12 +76,12 @@ getflowplot <- function(indata, hatmatrix, comparison){
                  stat = "identity",
                  #position='dodge',
                  colour = "white", 
-                 aes(x=reorder(path, flow), y=study.cont, fill = rob 
+                 aes(x=reorder(path, flow), y=study.cont, fill = "darkgreen"
                      
                      ### 2 ways to customize tooltip
                      ## 1. use label, label2, label3...
                      # label1=study, label2=study.cont, label3=rob)
-                     )) + #, alpha=study.cont
+                 )) + #, alpha=study.cont
         geom_point(data=t_df_pos, 
                    aes(x=reorder(path, flow), y=cumulativeflow),
                    shape=18) +
@@ -91,15 +96,98 @@ getflowplot <- function(indata, hatmatrix, comparison){
         #          size=1)+
         
         # flip the plot
-        coord_flip() +
+      coord_flip()
+    }
+    ## 3
+    else if ( (!1 %in% reorder_df$rob) & 
+        (!2 %in% reorder_df$rob) &
+        (3 %in% reorder_df$rob))
+    {
+      # here we reorder x
+      plot <- ggplot() + 
+        
+        # text
+        ggtitle(paste0("Contrast Estimate ",reorder_df$comparison[1])) +
+        xlab("Stream") + ylab("Proportional Contribution (%)") +
+        # hide legend
+        guides(fill="none") +
+        
+        # studydata
+        geom_bar(data=d_shareddata, 
+                 stat = "identity",
+                 #position='dodge',
+                 colour = "white", 
+                 aes(x=reorder(path, flow), y=study.cont, fill = "red"
+                     
+                     ### 2 ways to customize tooltip
+                     ## 1. use label, label2, label3...
+                     # label1=study, label2=study.cont, label3=rob)
+                 )) + #, alpha=study.cont
+        geom_point(data=t_df_pos, 
+                   aes(x=reorder(path, flow), y=cumulativeflow),
+                   shape=18) +
+        
+        ### this one works at non-interactive plot
+        # # treatment contrast data to become a frame
+        # geom_bar(data=t_df,
+        #          stat= "identity",
+        #          aes(x=reorder(path, flow), y=flowperedge),
+        #          fill = NA,
+        #          colour="grey2",
+        #          size=1)+
+        
+        # flip the plot
+      coord_flip()
+    }
+    ## 1, 2, 3
+    else {
+      # here we reorder x
+      plot <- ggplot() + 
+        
+        # text
+        ggtitle(paste0("Contrast Estimate ",reorder_df$comparison[1])) +
+        xlab("Stream") + ylab("Proportional Contribution (%)") +
+        # hide legend
+        guides(fill="none") +
+        
+        # studydata
+        geom_bar(data=d_shareddata, 
+                 stat = "identity",
+                 #position='dodge',
+                 colour = "white", 
+                 aes(x=reorder(path, flow), y=study.cont, fill = rob
+                     
+                     ### 2 ways to customize tooltip
+                     ## 1. use label, label2, label3...
+                     # label1=study, label2=study.cont, label3=rob)
+                 )) + #, alpha=study.cont
+        geom_point(data=t_df_pos, 
+                   aes(x=reorder(path, flow), y=cumulativeflow),
+                   shape=18) +
+        
+        ### this one works at non-interactive plot
+        # # treatment contrast data to become a frame
+        # geom_bar(data=t_df,
+        #          stat= "identity",
+        #          aes(x=reorder(path, flow), y=flowperedge),
+        #          fill = NA,
+        #          colour="grey2",
+        #          size=1)+
+        
+        # flip the plot
+      coord_flip() +
         
         # color of rob
+        # 如果只有一個rob會變黃色
         scale_fill_gradient2(
-            low = "darkgreen", 
-            mid = "gold", 
-            high = "red", 
-            midpoint = 2
+          low = "darkgreen", 
+          mid = "gold", 
+          high = "red", 
+          midpoint = 2,
+          na.value = "grey50"
         )
+    }
+    
 
 
     interactive.flowplot <- ggplotly(plot, tooltip = c("text"))
@@ -107,23 +195,47 @@ getflowplot <- function(indata, hatmatrix, comparison){
     ### 2 ways to customize tooltip hoverinfo
     ## Better: 2. directly modify the text data
     # since they are divided into 3 rob groups
-    for(i in 1:3){
-        reorder_df_groupbyrob <- reorder_df[which(reorder_df$rob==i),]
+    n <- 0
+    
+    for(i in sort(unique(reorder_df$rob)) ){
+      reorder_df_groupbyrob <- reorder_df[which(reorder_df$rob == i),]
+      
+      if ( length(unique(reorder_df$rob)) == 3 ) {
         if(i == 1){
           n <- 1
-        } else if (i == 2){
+        }
+        else if (i == 2){
           n <- 3
-        } else if (i == 3){
+        }
+        else if (i == 3){
           n <- 2
         }
-        interactive.flowplot$x$data[[n]]$text <- paste0("Study ID: ", reorder_df_groupbyrob$study,
-                                                        "<br>", reorder_df_groupbyrob$contrastinflow,
-                                                        "<br>Contribution: ", round(reorder_df_groupbyrob$study.cont, 2),
-                                                        "<br>ROB: ", reorder_df_groupbyrob$rob
-                                                        )
+      }
+        
+      if ( length(unique(reorder_df$rob)) == 2) {
+        if ( (1 %in% unique(reorder_df$rob)) &  (2 %in% unique(reorder_df$rob)) ) {
+          if (i == 2){
+            n <- 2
+          }
+          else if (i == 3){
+            n <- 1
+          }
+        }
+        n <- n + 1
+      }
+      
+      if ( length(unique(reorder_df$rob)) == 1) {
+        n <- n + 1
+      }
+
+      interactive.flowplot$x$data[[n]]$text <- paste0("Study ID: ", reorder_df_groupbyrob$study,
+                                                      "<br>", reorder_df_groupbyrob$contrastinflow,
+                                                      "<br>Contribution: ", round(reorder_df_groupbyrob$study.cont, 2),
+                                                      "<br>ROB: ", reorder_df_groupbyrob$rob
+                                                      )
     }
     
-    interactive.flowplot$x$data[[4]]$text <- paste0(t_df_pos$treatment_name)
+    interactive.flowplot$x$data[[ length(unique(reorder_df$rob)) + 1 ]]$text <- paste0(t_df_pos$treatment_name)
     
     interactive.flowplot <- highlight(interactive.flowplot, on = "plotly_click", off = "plotly_doubleclick")
     

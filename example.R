@@ -26,7 +26,8 @@ hatmatrix <- getHatMatrix(indata, type="long_binary", model="random", sm='OR')
 
 ##
 indata <- read.csv("./example data/hypocalcemia.csv", fileEncoding="UTF-8-BOM")
-comparison <- 'Cinacalcet:Evocalcet'
+comparison <- 'Cinacalcet:Placebo'
+comparison <- 'Cinacalcet:Parathyroidectomy'
 hatmatrix <- getHatMatrix(indata, type="long_binary", model="random", sm='OR')
 ##
 

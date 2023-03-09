@@ -1,7 +1,7 @@
 ###### merge the statistics with rob
 
 get.studies_rob <- function(indata, hatmatrix, comparison){
-    
+  source("./getflow.R")
     
     ### study_rob: new data.frame of each study's rob
     study_rob <- subset(indata, select=c("id","rob"))

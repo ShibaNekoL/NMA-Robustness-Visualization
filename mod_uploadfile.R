@@ -344,7 +344,7 @@ uploadfileServer <- function(id, stringsAsFactors) {
                      newdata <- data() %>% rename_("t" = input$box_treat,
                                                   "r" = input$box_event,
                                                   "n" = input$box_n,
-                                                  "study" = input$box_studlab,
+                                                  "id" = input$box_studlab,
                                                   "rob" = input$box_rob
                                                   )
                    }
@@ -353,11 +353,10 @@ uploadfileServer <- function(id, stringsAsFactors) {
                                                   "y" = input$box_mean_c,
                                                   "sd" = input$box_sd_c,
                                                   "n" = input$box_n_c,
-                                                  "study" = input$box_studlab_c,
+                                                  "id" = input$box_studlab_c,
                                                   "rob" = input$box_rob
                                                   )
                    }
-                   # print(newdata)
                    return(newdata)
                  })
                  
