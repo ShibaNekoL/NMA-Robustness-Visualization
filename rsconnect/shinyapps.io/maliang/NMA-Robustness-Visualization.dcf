@@ -5,10 +5,10 @@ account: maliang
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 8523062
-bundleId: 6936924
+bundleId: 6939824
 url: https://maliang.shinyapps.io/NMA-Robustness-Visualization/
-when: 1678374087.87684
-lastSyncTime: 1678374087.87686
+when: 1678422192.79338
+lastSyncTime: 1678422192.79339
 asMultiple: FALSE
 asStatic: FALSE
 ignoredFiles: example.R

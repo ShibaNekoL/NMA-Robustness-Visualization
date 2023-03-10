@@ -1,7 +1,7 @@
 
 
 get.robustnetworkplot <- function(indata, hatmatrix, comparison){
-    source("./robustness.R")
+    # source("./robustness.R")
     library(dplyr)
     library(igraph)
     library(ggraph)
@@ -72,7 +72,7 @@ get.robustnetworkplot <- function(indata, hatmatrix, comparison){
 }
 
 get.interactive.robustnetworkplot <- function(indata, hatmatrix, comparison, highrisk=F, nodesizeby=1, edgesizeby=1){
-    source("./robustness.R")
+    # source("./robustness.R")
     library(dplyr)
     library(igraph)
     library(ggraph)

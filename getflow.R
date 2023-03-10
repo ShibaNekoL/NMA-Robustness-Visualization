@@ -2,10 +2,10 @@
 
 get.streams_df <- function(indata, hatmatrix, comparison){
     
-    source("./flow_contribution/R/hatmatrix.R")
-    source("./flow_contribution/R/streamStatistics2.R")
-    source("./flow_contribution/R/studycontribution.R")
-    source("./flow_contribution/R/contributionrow.R")
+    # source("./flow_contribution/R/hatmatrix.R")
+    # source("./flow_contribution/R/streamStatistics2.R")
+    # source("./flow_contribution/R/studycontribution.R")
+    # source("./flow_contribution/R/contributionrow.R")
     
     ### Get the return list modified by Man-fang Liang in "streamStatistics2.R"
     
@@ -73,10 +73,10 @@ get.streams_df <- function(indata, hatmatrix, comparison){
 get.studies_df <- function(indata, hatmatrix, comparison){
     
     library(igraph)
-    source("./flow_contribution/R/hatmatrix.R")
-    source("./flow_contribution/R/streamStatistics2.R")
-    source("./flow_contribution/R/studycontribution.R")
-    source("./flow_contribution/R/contributionrow.R")
+    # source("./flow_contribution/R/hatmatrix.R")
+    # source("./flow_contribution/R/streamStatistics2.R")
+    # source("./flow_contribution/R/studycontribution.R")
+    # source("./flow_contribution/R/contributionrow.R")
     
     ### read contents
     studiesstat <- getStudyContribution(hatmatrix, comparison)

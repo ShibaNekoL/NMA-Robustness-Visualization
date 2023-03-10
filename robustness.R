@@ -1,7 +1,7 @@
 ###### merge the statistics with rob
 
 get.studies_rob <- function(indata, hatmatrix, comparison){
-  source("./getflow.R")
+  # source("./getflow.R")
     
     ### study_rob: new data.frame of each study's rob
     study_rob <- subset(indata, select=c("id","rob"))
@@ -19,7 +19,7 @@ get.studies_rob <- function(indata, hatmatrix, comparison){
 ###### an robustness index of each contrast in flow
 
 get.robustness <- function(indata, hatmatrix, comparison){
-    source("./getflow.R")
+    # source("./getflow.R")
     studies_rob <- get.studies_rob(indata, hatmatrix, comparison)
     
     ### set risk for each rob 0.2, 0.5, 0.8

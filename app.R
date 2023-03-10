@@ -1,5 +1,7 @@
 source("./flow_contribution/R/streamstatistics2.R")
 source("./flow_contribution/R/hatmatrix.R")
+source("./flow_contribution/R/contributionrow.R")
+source("./flow_contribution/R/studycontribution.R")
 
 source("./getflow.R")
 source("./getflowplot.R")
@@ -7,16 +9,15 @@ source("./robustness.R")
 source("./robustnetplot.R")
 source("./contrast_robustnetplot.R")
 
-library(netmeta)
-library(shinyjs)
-library(shinybusy)
-library(plyr); library(dplyr)
-
 source("./mod_uploadfile.R")
 source("./mod_streamrob.R")
 source("./mod_streamrobustness.R")
 source("./mod_networkrobustness.R")
 
+library(netmeta)
+library(shinyjs)
+library(shinybusy)
+library(plyr); library(dplyr)
 
 ui <- fluidPage(
   shinyjs::useShinyjs(),

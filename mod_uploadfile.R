@@ -2,7 +2,7 @@
 library(DT)
 library(shinyjs)
 library(dplyr)
-source("./flow_contribution/R/hatmatrix.R")
+# source("./flow_contribution/R/hatmatrix.R")
 
 # Define UI for data upload app ----
 uploadfileUI <- function(id) {
