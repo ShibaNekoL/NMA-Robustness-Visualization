@@ -90,7 +90,8 @@ get.interactive.contrast_robust_plot <- function(indata, hatmatrix, sm, highrisk
     library(ggraph)
     library(visNetwork) 
     library(scales)
-
+    library(tidygraph)
+  
     ### create node data
     indata$trials <- 1
     nodes <- aggregate(subset(indata, select=c("r", "n", "trials")), by=list(indata$t), FUN=sum)

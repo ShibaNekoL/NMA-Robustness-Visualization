@@ -2,6 +2,9 @@ setwd('C:/Users/hsnutardis/OneDrive - 國立台灣大學/2023 學士班論文/NM
 
 source("./flow_contribution/R/streamstatistics2.R")
 source("./flow_contribution/R/hatmatrix.R")
+source("./flow_contribution/R/studycontribution.R")
+source("./flow_contribution/R/contributionrow.R")
+
 
 source("./getflow.R")
 source("./getflowplot.R")

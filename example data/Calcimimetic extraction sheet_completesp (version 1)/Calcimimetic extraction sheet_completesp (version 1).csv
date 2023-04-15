@@ -1,0 +1,76 @@
+﻿ind,Intervention_generic,Study,# patients overall,PTH_m,PTH_sd,PTH_n,AchievePTH_r,AchievePTH_n,Risk of bias due to attrition,rob,indirectness
+Charytan 2005,Cinacalcet,7,27,,,,15,27,High,3,1
+ADVANCE 2011,Vitamin D,15,180,,,,,,High,3,1
+Ureña-Torres 2013,Vitamin D,22,151,,,,58,151,Low,1,1
+Charytan 2005,Placebo,7,27,,,,5,27,High,3,1
+IMPACT SPHT 2012 (IV stratum),Vitamin D,18,62,-244.2,36.4,60,36,62,High,3,1
+IMPACT SPHT 2012 (Oral stratum),Cinacalcet + low dose vitamin D,19,70,-150.3,24.5,70,30,70,High,3,1
+Ureña-Torres 2013,Cinacalcet + low dose vitamin D,22,153,,,,96,153,Low,1,1
+ADVANCE 2011,Cinacalcet + low dose vitamin D,15,180,,,,,,High,3,1
+IMPACT SPHT 2012 (Oral stratum),Vitamin D,19,72,-216.3,24.5,70,39,72,High,3,1
+Block 2017_NCT01896232,Cinacalcet,31,340,,,,198,343,High,3,1
+IMPACT SPHT 2012 (IV stratum),Cinacalcet + low dose vitamin D,18,64,-78.4,36.4,60,21,64,High,3,1
+PARADIGM 2015,Vitamin D,27,155,708.6,560.78,111,66,155,High,3,1
+PARADIGM 2015,Cinacalcet,27,157,689,480.19,111,53,157,High,3,1
+Block 2017_NCT01788046,Etelcalcetide,33,255,852,550,255,192,255,High,3,1
+Block 2017_NCT01788046,Placebo,33,260,960,550,260,25,260,High,3,1
+Block 2017_NCT01785849,Placebo,32,254,897,550,254,21,254,High,3,1
+Block 2017_NCT01785849,Etelcalcetide,32,254,820,550,254,188,254,High,3,1
+Block 2017_NCT01896232,Etelcalcetide,31,343,,,,232,340,High,3,1
+EVOLVE 2012,Cinacalcet,17,1948,,,,,,Low,1,1
+EVOLVE 2012,Placebo,17,1935,,,,,,Low,1,1
+Goodman 2000,Cinacalcet,1,16,,,,,,High,3,1
+Goodman 2000,Placebo,1,5,,,,,,High,3,1
+Goodman 2002,Cinacalcet,2,23,,,,,,Low,1,1
+Goodman 2002,Placebo,2,7,767,457,7,,,Low,1,1
+Lindberg 2003,Cinacalcet,3,39,460,289.7,38,14,38,High,3,1
+Lindberg 2003,Placebo,3,39,701,437.1,37,3,39,High,3,1
+Quarles 2003,Cinacalcet,4,36,451,444,34,19,36,Low,1,1
+Quarles 2003,Placebo,4,35,552,484,31,8,35,High,3,1
+Block 2004,Cinacalcet,5,371,374,366,371,239,371,High,3,1
+Block 2004,Placebo,5,370,693,372.6,370,42,370,High,3,1
+Harris 2004,Cinacalcet,6,17,,,,,,High,3,1
+Harris 2004,Placebo,6,5,,,,,,High,3,1
+Lindberg 2005,Placebo,8,101,852,551,100,13,100,High,3,1
+Lindberg 2005,Cinacalcet,8,294,525.5,510.81,288,187,288,High,3,1
+ACHIEVE 2008,Cinacalcet + low dose vitamin D,9,87,,,,51,75,High,3,1
+ACHIEVE 2008,Vitamin D,9,86,,,,23,64,High,3,1
+Akiba 2008,Placebo,10,30,595.5,500,30,,,Low,1,1
+Akiba 2008,Cinacalcet,10,91,,,,,,High,3,1
+Fugakawa 2008,Placebo,11,71,,,,2,71,Low,1,1
+Fugakawa 2008,Cinacalcet,11,72,,,,37,72,Low,1,1
+Malluche 2008,Cinacalcet,12,32,307,218,19,,,High,3,1
+Malluche 2008,Placebo,12,16,829,543,13,,,High,3,1
+OPTIMA 2008,Cinacalcet,13,368,264,168,368,261,368,High,3,1
+OPTIMA 2008,Control,13,184,519,281,184,40,184,High,3,1
+Chonchol 2009,Placebo,14,102,,,,28,99,Low,1,1
+Chonchol 2009,Cinacalcet,14,302,,,,216,293,Low,1,1
+El-Shafey 2011,Cinacalcet,16,55,334,189,55,30,52,Low,1,1
+El-Shafey 2011,Control,16,27,595,225,27,5,26,Low,1,1
+Kaperonis 2012,Cinacalcet,20,13,,,,,,Unclear risk,2,1
+Kaperonis 2012,Paricalcitol,20,,,,,,,Unclear risk,2,1
+CUPID 2013,Cinacalcet,21,33,,,,16,33,High,3,1
+CUPID 2013,Control,21,33,,,,17,33,High,3,1
+Pasquali 2014,Cinacalcet,23,8,816,326,8,,,High,3,1
+Pasquali 2014,Paricalcitol,23,8,754,342,8,,,High,3,1
+Bell 2015,Etelcalcetide,24,6,462,602,6,,,Low,1,1
+Bell 2015,Placebo,24,4,648,267,4,,,Low,1,1
+Bell 2015,Etelcalcetide,25,21,376,281,21,,,Low,1,1
+Bell 2015,Placebo,25,21,734,317,21,,,Low,1,1
+Bell 2015,Etelcalcetide,26,13,518,608,13,,,Low,1,1
+Bell 2015,Placebo,26,13,608,301,13,,,Low,1,1
+Cruzado 2016,Cinacalcet,28,15,193,96,15,0,15,High,3,1
+Cruzado 2016,Parathyroidectomy,28,15,53,44,15,10,15,High,3,1
+Mei 2016,Placebo,29,117,1316.1,744.8,114,4,114,High,3,1
+Mei 2016,Cinacalcet,29,121,748.6,730.2,118,30,118,High,3,1
+Fugakawa 2017,Etelcalcetide,34,78,,,,60,78,High,3,1
+Fugakawa 2017,Placebo,34,77,,,,4,77,High,3,1
+Poulin 2017,Cinacalcet,35,21,,,,,,High,3,1
+Poulin 2017,Placebo,35,,,,,,,High,3,1
+Akizawa 2018,Evocalcet,36,91,-12.87,27.91,88,24,88,Low,1,1
+Akizawa 2018,Cinacalcet,36,30,-25.86,27.76,28,14,28,Low,1,1
+Akizawa 2018,Placebo,36,30,5.44,25.85,28,2,28,Low,1,1
+Fugakawa 2018,Cinacalcet,37,317,-53.57,23,317,204,319,High,3,1
+Fugakawa 2018,Evocalcet,37,317,-49.64,25.87,317,184,320,High,3,1
+Yokoyama 2016,Etelcalcetide,30,8,,,,,,Unclear risk,2,1
+Yokoyama 2016,Placebo,30,3,,,,,,Unclear risk,2,1

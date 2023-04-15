@@ -1,0 +1,32 @@
+﻿Unique Study ID,Intervention_generic,Study,AchievePTH_r,AchievePTH_n,Risk of bias due to attrition,rob,indirectness
+IMPACT SPHT 2012 (IV stratum),Vitamin D,18,36,62,High,3,1
+IMPACT SPHT 2012 (Oral stratum),Cinacalcet + low dose vitamin D,19,30,70,High,3,1
+IMPACT SPHT 2012 (Oral stratum),Vitamin D,19,39,72,High,3,1
+IMPACT SPHT 2012 (IV stratum),Cinacalcet + low dose vitamin D,18,21,64,High,3,1
+PARADIGM 2015,Vitamin D,27,66,155,High,3,1
+PARADIGM 2015,Cinacalcet,27,53,157,High,3,1
+Block 2017_NCT01788046,Etelcalcetide,33,192,255,High,3,1
+Block 2017_NCT01788046,Placebo,33,25,260,High,3,1
+Block 2017_NCT01785849,Placebo,32,21,254,High,3,1
+Block 2017_NCT01785849,Etelcalcetide,32,188,254,High,3,1
+Lindberg 2003,Cinacalcet,3,14,38,High,3,1
+Lindberg 2003,Placebo,3,3,39,High,3,1
+Quarles 2003,Cinacalcet,4,19,36,Low,1,1
+Quarles 2003,Placebo,4,8,35,Low,1,1
+Block 2004,Cinacalcet,5,239,371,High,3,1
+Block 2004,Placebo,5,42,370,High,3,1
+Lindberg 2005,Placebo,8,13,100,High,3,1
+Lindberg 2005,Cinacalcet,8,187,288,High,3,1
+OPTIMA 2008,Cinacalcet,13,261,368,High,3,1
+OPTIMA 2008,Control,13,40,184,High,3,1
+El-Shafey 2011,Cinacalcet,16,30,52,Low,1,1
+El-Shafey 2011,Control,16,5,26,Low,1,1
+Cruzado 2016,Cinacalcet,28,0,15,High,3,1
+Cruzado 2016,Parathyroidectomy,28,10,15,High,3,1
+Mei 2016,Placebo,29,4,114,High,3,1
+Mei 2016,Cinacalcet,29,30,118,High,3,1
+Akizawa 2018,Evocalcet,36,24,88,Low,1,1
+Akizawa 2018,Cinacalcet,36,14,28,Low,1,1
+Akizawa 2018,Placebo,36,2,28,Low,1,1
+Fugakawa 2018,Cinacalcet,37,204,319,High,3,1
+Fugakawa 2018,Evocalcet,37,184,320,High,3,1

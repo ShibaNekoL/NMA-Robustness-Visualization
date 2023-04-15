@@ -45,8 +45,20 @@ streamrobustbessUI <- function(id) {
                     value=c(0,1))
       ),
       mainPanel(
-        # stream robustness plot
-        visNetworkOutput(ns("visStreamRobustness"))
+
+        # fluid row with plot and legend panel -------
+        fluidRow(
+          column(10,
+                 # stream robustness plot
+                 visNetworkOutput(ns("visStreamRobustness"))
+          ),
+          
+          # legend
+          column(2,
+                 plotOutput(ns("legend2"))
+          )
+        )
+        
       )
     ),
     # data table for streams
@@ -77,6 +89,44 @@ streamrobustbessServer <- function(id, indata, hatmatrix, comparison){
     ## Below is the module function
     function(input, output, session) {
       ns <- session$ns
+      
+      # legend ------------
+      
+      # helper function
+      create_legend <- function(highrisk){
+        
+        
+        colors_T <- c("darkred", "#FFFFFF")
+        pa <- colorRampPalette(colors_T)(100)
+        
+        if (highrisk == "FALSE") {
+          # image(0, 
+          #       seq(from = 0.1, to = 0.9, length.out = 100), 
+          #       t(seq_along(seq(from = 0.1, to = 0.9, length.out = 100))), 
+          #       col=pa, axes=F,
+          #       xlab = "", ylab = ""
+          # )
+          # axis(4, at=c(0.1, 0.5, 0.9))
+          # title(main = "Robustness", font.main = 4, cex.main = 1)
+          
+        } else if (highrisk == "TRUE") {
+          image(0, 
+                seq(from = 0.1, to = 0.9, length.out = 100), 
+                t(seq_along(seq(from = 0.1, to = 0.9, length.out = 100))), 
+                col=pa, axes=F,
+                xlab = "", ylab = ""
+          )
+          axis(4, at=c(0.1, 0.5, 0.9))
+          title(main = "Robustness", font.main = 4, cex.main = 1)
+        }
+      }
+      
+      # render legend
+      output$legend2 <- renderPlot({
+        create_legend(input$highriskswitcher)
+      }
+      )      
+      
       
       # print(indata)
       plot <- get.interactive.robustnetworkplot(indata, hatmatrix, comparison, highrisk=F, nodesizeby=1, edgesizeby = 1)
