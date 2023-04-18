@@ -366,7 +366,7 @@ uploadfileServer <- function(id, stringsAsFactors) {
                  })
                  
                  hatmatrix <- eventReactive(input$btn_confirm, {
-                   getHatMatrix(newdata(), input$radio_data_type, sm = input$box_sm)
+                   getHatMatrix(newdata(), input$radio_data_type, model="random", sm = input$box_sm)
                  })
 
                  return(list(indata = newdata,

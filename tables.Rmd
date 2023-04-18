@@ -1,0 +1,80 @@
+---
+title: "Tables"
+author: "Man-Fang Liang"
+date: "2023-04-15"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+setwd('C:/Users/hsnutardis/OneDrive - 國立台灣大學/2023 學士班論文/NMA-Robustness-Visualization/')
+
+source("./flow_contribution/R/streamstatistics2.R")
+source("./flow_contribution/R/hatmatrix.R")
+source("./flow_contribution/R/studycontribution.R")
+source("./flow_contribution/R/contributionrow.R")
+
+
+source("./getflow.R")
+source("./getflowplot.R")
+source("./robustness.R")
+source("./robustnetplot.R")
+source("./contrast_robustnetplot.R")
+
+source("./contrast_robustnetplot.R")
+library(netmeta)
+
+```
+
+
+```{r}
+# indata <- read.csv("./example data/diabetes.csv", fileEncoding="UTF-8-BOM")
+
+indata <- read.csv("./example data/Calcimimetic extraction sheet_completesp (version 1)/Calcimimetic extraction sheet_completesp (version 1) non NA - columns.csv", fileEncoding="UTF-8-BOM")
+
+# comparison <- 'ACE:Placebo'
+# comparison <- 'ACE:ARB'
+# comparison <- 'BBlocker:CCB'
+# comparison <- 'ARB:Diuretic'
+# comparison <- 'Cinacalcet:Control'
+hatmatrix <- getHatMatrix(indata, type="long_binary", model="random", sm='OR')
+
+
+```
+
+# weighted average
+```{r}
+proportion.ROB <- get.studies_rob(indata, hatmatrix, comparison)
+proportion.ROB$rob_q <- ifelse(proportion.ROB$rob==1, 0, ifelse(proportion.ROB$rob==2, 0.5, ifelse(proportion.ROB$rob==3, 1, NA)))
+proportion.ROB$rob_p <- 1 - proportion.ROB$rob_q
+
+# calculate the proportion of rob for each path
+path_flow.df <- unique(subset(proportion.ROB, select=c("path","flow")))
+
+proportion.ROB$pro.rob <- (proportion.ROB$rob_p / 100) * (proportion.ROB$study.cont / proportion.ROB$flow)
+proportion.ROB <- aggregate( subset( proportion.ROB, select=c("pro.rob") ), by=list(proportion.ROB$path), FUN=sum)
+names(proportion.ROB)[1] <- "path"
+
+```
+```{r}
+0.1*1/3+0.9*1/3+0.9*1/3
+```
+
+# Robustness
+```{r}
+r <- get.robustness(indata, hatmatrix ,comparison)$pathrobust
+compare.robustness <- merge(r, proportion.ROB, by=c("path"))
+compare.robustness
+```
+
+```{r}
+proportion.ROB <- merge(proportion.ROB, path_flow.df, by=c("path"), all.X=T)
+proportion.ROB_contrast_network <- sum(proportion.ROB$pro.rob * proportion.ROB$flow)
+proportion.ROB_contrast_network
+```
+
+

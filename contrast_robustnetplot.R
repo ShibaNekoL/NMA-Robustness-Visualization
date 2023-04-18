@@ -222,7 +222,7 @@ get.interactive.contrast_robust_plot <- function(indata, hatmatrix, sm, highrisk
     colors_F <- c("darkred", "gold", "darkgreen")
     pal_F <- colorRampPalette(colors_F)(100)
 
-    vis.links$c_ref_F <- findInterval(vis.links$contrast_robust, seq(from = 0.1, to = 0.9, length.out = 100), all.inside=T)
+    vis.links$c_ref_F <- findInterval(vis.links$contrast_robust, seq(from = 0, to = 0.9, length.out = 100), all.inside=T)
     vis.links$color_F <- pal_F[vis.links$c_ref_F]
     
     # T
@@ -239,7 +239,7 @@ get.interactive.contrast_robust_plot <- function(indata, hatmatrix, sm, highrisk
         alpha)
     
     # data rob range now c(0.1,0.9) converts to alpha c(0,1)
-    vis.links$c_ref_T <- findInterval(vis.links$contrast_robust, seq(from = 0.1, to = 0.9, length.out = 100), all.inside=T)
+    vis.links$c_ref_T <- findInterval(vis.links$contrast_robust, seq(from = 0, to = 0.9, length.out = 100), all.inside=T)
     vis.links$color_T <- pal_T[vis.links$c_ref_T]
     
     if (highrisk==F) {

@@ -137,22 +137,22 @@ networkrobustbessServer <- function(id, indata, hatmatrix, sm) {
                    
                    if (highrisk == "FALSE") {
                      image(0, 
-                           seq(from = 0.1, to = 0.9, length.out = 100), 
-                           t(seq_along(seq(from = 0.1, to = 0.9, length.out = 100))), 
+                           seq(from = 0, to = 0.9, length.out = 100), 
+                           t(seq_along(seq(from = 0, to = 0.9, length.out = 100))), 
                            col=pal_F, axes=F,
                            xlab = "", ylab = ""
                      )
-                     axis(4, at=c(0.1, 0.5, 0.9))
+                     axis(4, at=c(0, 0.5, 0.9))
                      title(main = "Robustness", font.main = 4, cex.main = 1)
                      
                    } else if (highrisk == "TRUE") {
                      image(0, 
-                           seq(from = 0.1, to = 0.9, length.out = 100), 
-                           t(seq_along(seq(from = 0.1, to = 0.9, length.out = 100))), 
+                           seq(from = 0, to = 0.9, length.out = 100), 
+                           t(seq_along(seq(from = 0, to = 0.9, length.out = 100))), 
                            col=pa, axes=F,
                            xlab = "", ylab = ""
                      )
-                     axis(4, at=c(0.1, 0.5, 0.9))
+                     axis(4, at=c(0, 0.5, 0.9))
                      title(main = "Robustness", font.main = 4, cex.main = 1)
                    }
                  }

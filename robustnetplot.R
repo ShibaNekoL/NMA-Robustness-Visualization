@@ -98,7 +98,6 @@ get.interactive.robustnetworkplot <- function(indata, hatmatrix, comparison, hig
     
     edges <- subset(edges, select=c("from", "to", "edgehead", "path", "flow", "edge_p", "path_p","contrastinflow", "length"))
     
-    
     ### nodes attribution----------------------------------------------------
     
     vis.nodes <- nodes

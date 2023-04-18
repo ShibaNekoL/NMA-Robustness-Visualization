@@ -22,7 +22,7 @@ get.robustness <- function(indata, hatmatrix, comparison){
     # source("./getflow.R")
     studies_rob <- get.studies_rob(indata, hatmatrix, comparison)
     
-    ### set risk for each rob 0.2, 0.5, 0.8
+    ### set risk for each rob 0.1, 0.5, 0.9
     # rob_q is the probability of failed
     studies_rob$rob_q <- ifelse(studies_rob$rob==1, 0.1, ifelse(studies_rob$rob==2, 0.5, ifelse(studies_rob$rob==3, 0.9, NA)))
     studies_rob$rob_p <- 1 - studies_rob$rob_q
